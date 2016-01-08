@@ -2,7 +2,10 @@ package com.leanthoughts.sky.resources.root;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.leanthoughts.sky.resources.wrapper.FlightResourceWrapper;
+import com.leanthoughts.sky.resources.FlightResource;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by sadath on 07-Jan-2016.
@@ -10,17 +13,17 @@ import com.leanthoughts.sky.resources.wrapper.FlightResourceWrapper;
 @JsonInclude(value = JsonInclude.Include.NON_NULL)
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class FlightResourceRoot {
-    private FlightResourceWrapper _embedded;
+    private List<FlightResource> flights = new ArrayList<FlightResource>();
 
     public FlightResourceRoot() {
     }
 
-    public FlightResourceWrapper get_embedded() {
-        return this._embedded;
+    public List<FlightResource> getFlights() {
+        return this.flights;
     }
 
-    public void set_embedded(FlightResourceWrapper _embedded) {
-        this._embedded = _embedded;
+    public void setFlights(List<FlightResource> flights) {
+        this.flights = flights;
     }
 
     public boolean equals(Object o) {
@@ -28,17 +31,17 @@ public class FlightResourceRoot {
         if (!(o instanceof FlightResourceRoot)) return false;
         final FlightResourceRoot other = (FlightResourceRoot) o;
         if (!other.canEqual((Object) this)) return false;
-        final Object this$_embedded = this._embedded;
-        final Object other$_embedded = other._embedded;
-        if (this$_embedded == null ? other$_embedded != null : !this$_embedded.equals(other$_embedded)) return false;
+        final Object this$flights = this.flights;
+        final Object other$flights = other.flights;
+        if (this$flights == null ? other$flights != null : !this$flights.equals(other$flights)) return false;
         return true;
     }
 
     public int hashCode() {
         final int PRIME = 59;
         int result = 1;
-        final Object $_embedded = this._embedded;
-        result = result * PRIME + ($_embedded == null ? 0 : $_embedded.hashCode());
+        final Object $flights = this.flights;
+        result = result * PRIME + ($flights == null ? 0 : $flights.hashCode());
         return result;
     }
 
@@ -47,6 +50,6 @@ public class FlightResourceRoot {
     }
 
     public String toString() {
-        return "com.leanthoughts.sky.resources.root.FlightResourceRoot(_embedded=" + this._embedded + ")";
+        return "com.leanthoughts.sky.resources.root.FlightResourceRoot(flights=" + this.flights + ")";
     }
 }

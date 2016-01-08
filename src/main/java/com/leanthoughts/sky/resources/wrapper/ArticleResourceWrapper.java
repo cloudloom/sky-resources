@@ -2,32 +2,31 @@ package com.leanthoughts.sky.resources.wrapper;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.leanthoughts.sky.resources.root.FlightResourceRoot;
+import com.leanthoughts.sky.resources.root.ArticleResourceRoot;
 
 /**
- * Created by sadath on 07-Jan-2016.
+ * Created by sadath on 08-Jan-2016.
  */
 @JsonInclude(value = JsonInclude.Include.NON_NULL)
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class FlightResourceWrapper {
-    private FlightResourceRoot _embedded;
+public class ArticleResourceWrapper {
+    private ArticleResourceRoot _embedded;
 
-    public FlightResourceWrapper() {
+    public ArticleResourceWrapper() {
     }
 
-
-    public FlightResourceRoot get_embedded() {
+    public ArticleResourceRoot get_embedded() {
         return this._embedded;
     }
 
-    public void set_embedded(FlightResourceRoot _embedded) {
+    public void set_embedded(ArticleResourceRoot _embedded) {
         this._embedded = _embedded;
     }
 
     public boolean equals(Object o) {
         if (o == this) return true;
-        if (!(o instanceof FlightResourceWrapper)) return false;
-        final FlightResourceWrapper other = (FlightResourceWrapper) o;
+        if (!(o instanceof ArticleResourceWrapper)) return false;
+        final ArticleResourceWrapper other = (ArticleResourceWrapper) o;
         if (!other.canEqual((Object) this)) return false;
         final Object this$_embedded = this._embedded;
         final Object other$_embedded = other._embedded;
@@ -44,10 +43,10 @@ public class FlightResourceWrapper {
     }
 
     protected boolean canEqual(Object other) {
-        return other instanceof FlightResourceWrapper;
+        return other instanceof ArticleResourceWrapper;
     }
 
     public String toString() {
-        return "com.leanthoughts.sky.resources.wrapper.FlightResourceWrapper(_embedded=" + this._embedded + ")";
+        return "com.leanthoughts.sky.resources.wrapper.ArticleResourceWrapper(_embedded=" + this._embedded + ")";
     }
 }

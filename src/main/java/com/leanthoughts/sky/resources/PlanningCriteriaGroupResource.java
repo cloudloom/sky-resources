@@ -4,6 +4,11 @@ package com.leanthoughts.sky.resources;
  * Created by fahad on 15-12-2015.
  */
 
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
+
 /**
  * Planning Criteria Group :
  *      Non-perishable Food
@@ -11,9 +16,11 @@ package com.leanthoughts.sky.resources;
  *      Crew Food
  *      Dry Store ( Other Consumables )
  */
-
 public class PlanningCriteriaGroupResource extends BaseResource {
     private String name;
+    private Set<String> products = new HashSet<String>();
+    private Map<String, ArticleResource> productsMetaData = new HashMap<String, ArticleResource>();
+    private Set<MealCategoryResource> mealCategories = new HashSet<MealCategoryResource>(0);
 
     public PlanningCriteriaGroupResource() {
     }
@@ -22,8 +29,32 @@ public class PlanningCriteriaGroupResource extends BaseResource {
         return this.name;
     }
 
+    public Set<String> getProducts() {
+        return this.products;
+    }
+
+    public Map<String, ArticleResource> getProductsMetaData() {
+        return this.productsMetaData;
+    }
+
+    public Set<MealCategoryResource> getMealCategories() {
+        return this.mealCategories;
+    }
+
     public void setName(String name) {
         this.name = name;
+    }
+
+    public void setProducts(Set<String> products) {
+        this.products = products;
+    }
+
+    public void setProductsMetaData(Map<String, ArticleResource> productsMetaData) {
+        this.productsMetaData = productsMetaData;
+    }
+
+    public void setMealCategories(Set<MealCategoryResource> mealCategories) {
+        this.mealCategories = mealCategories;
     }
 
     public boolean equals(Object o) {
@@ -34,6 +65,17 @@ public class PlanningCriteriaGroupResource extends BaseResource {
         final Object this$name = this.name;
         final Object other$name = other.name;
         if (this$name == null ? other$name != null : !this$name.equals(other$name)) return false;
+        final Object this$products = this.products;
+        final Object other$products = other.products;
+        if (this$products == null ? other$products != null : !this$products.equals(other$products)) return false;
+        final Object this$productsMetaData = this.productsMetaData;
+        final Object other$productsMetaData = other.productsMetaData;
+        if (this$productsMetaData == null ? other$productsMetaData != null : !this$productsMetaData.equals(other$productsMetaData))
+            return false;
+        final Object this$mealCategories = this.mealCategories;
+        final Object other$mealCategories = other.mealCategories;
+        if (this$mealCategories == null ? other$mealCategories != null : !this$mealCategories.equals(other$mealCategories))
+            return false;
         return true;
     }
 
@@ -42,6 +84,12 @@ public class PlanningCriteriaGroupResource extends BaseResource {
         int result = 1;
         final Object $name = this.name;
         result = result * PRIME + ($name == null ? 0 : $name.hashCode());
+        final Object $products = this.products;
+        result = result * PRIME + ($products == null ? 0 : $products.hashCode());
+        final Object $productsMetaData = this.productsMetaData;
+        result = result * PRIME + ($productsMetaData == null ? 0 : $productsMetaData.hashCode());
+        final Object $mealCategories = this.mealCategories;
+        result = result * PRIME + ($mealCategories == null ? 0 : $mealCategories.hashCode());
         return result;
     }
 
@@ -50,6 +98,6 @@ public class PlanningCriteriaGroupResource extends BaseResource {
     }
 
     public String toString() {
-        return "com.leanthoughts.sky.api.gateway.resources.PlanningCriteriaGroupResource(name=" + this.name + ")";
+        return "com.leanthoughts.sky.resources.PlanningCriteriaGroupResource(name=" + this.name + ", products=" + this.products + ", productsMetaData=" + this.productsMetaData + ", mealCategories=" + this.mealCategories + ")";
     }
 }
