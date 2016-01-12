@@ -107,19 +107,7 @@ public class MealCategoryResource extends BaseResource {
         if (this$description == null ? other$description != null : !this$description.equals(other$description))
             return false;
         if (this.enabled != other.enabled) return false;
-        final Object this$parent = this.parent;
-        final Object other$parent = other.parent;
-        if (this$parent == null ? other$parent != null : !this$parent.equals(other$parent)) return false;
-        final Object this$children = this.children;
-        final Object other$children = other.children;
-        if (this$children == null ? other$children != null : !this$children.equals(other$children)) return false;
-        final Object this$products = this.products;
-        final Object other$products = other.products;
-        if (this$products == null ? other$products != null : !this$products.equals(other$products)) return false;
-        final Object this$productsMetaData = this.productsMetaData;
-        final Object other$productsMetaData = other.productsMetaData;
-        if (this$productsMetaData == null ? other$productsMetaData != null : !this$productsMetaData.equals(other$productsMetaData))
-            return false;
+
         return true;
     }
 
@@ -133,14 +121,7 @@ public class MealCategoryResource extends BaseResource {
         final Object $description = this.description;
         result = result * PRIME + ($description == null ? 0 : $description.hashCode());
         result = result * PRIME + (this.enabled ? 79 : 97);
-        final Object $parent = this.parent;
-        result = result * PRIME + ($parent == null ? 0 : $parent.hashCode());
-        final Object $children = this.children;
-        result = result * PRIME + ($children == null ? 0 : $children.hashCode());
-        final Object $products = this.products;
-        result = result * PRIME + ($products == null ? 0 : $products.hashCode());
-        final Object $productsMetaData = this.productsMetaData;
-        result = result * PRIME + ($productsMetaData == null ? 0 : $productsMetaData.hashCode());
+
         return result;
     }
 

@@ -14,7 +14,7 @@ import java.io.Serializable;
 @JsonInclude(value = JsonInclude.Include.NON_NULL)
 @JsonIgnoreProperties(ignoreUnknown = true)
 public abstract class BaseResource implements Serializable {
-    protected EntityIdResource entityId;
+    private String uid;
 
     @JsonIgnore
     protected boolean passive;
@@ -22,16 +22,16 @@ public abstract class BaseResource implements Serializable {
     public BaseResource() {
     }
 
-    public EntityIdResource getEntityId() {
-        return this.entityId;
+    public String getUid() {
+        return this.uid;
     }
 
     public boolean isPassive() {
         return this.passive;
     }
 
-    public void setEntityId(EntityIdResource entityId) {
-        this.entityId = entityId;
+    public void setUid(String uid) {
+        this.uid = uid;
     }
 
     public void setPassive(boolean passive) {
@@ -43,9 +43,9 @@ public abstract class BaseResource implements Serializable {
         if (!(o instanceof BaseResource)) return false;
         final BaseResource other = (BaseResource) o;
         if (!other.canEqual((Object) this)) return false;
-        final Object this$entityId = this.entityId;
-        final Object other$entityId = other.entityId;
-        if (this$entityId == null ? other$entityId != null : !this$entityId.equals(other$entityId)) return false;
+        final Object this$uid = this.uid;
+        final Object other$uid = other.uid;
+        if (this$uid == null ? other$uid != null : !this$uid.equals(other$uid)) return false;
         if (this.passive != other.passive) return false;
         return true;
     }
@@ -53,8 +53,8 @@ public abstract class BaseResource implements Serializable {
     public int hashCode() {
         final int PRIME = 59;
         int result = 1;
-        final Object $entityId = this.entityId;
-        result = result * PRIME + ($entityId == null ? 0 : $entityId.hashCode());
+        final Object $uid = this.uid;
+        result = result * PRIME + ($uid == null ? 0 : $uid.hashCode());
         result = result * PRIME + (this.passive ? 79 : 97);
         return result;
     }
@@ -64,6 +64,6 @@ public abstract class BaseResource implements Serializable {
     }
 
     public String toString() {
-        return "com.leanthoughts.sky.api.gateway.resources.BaseResource(entityId=" + this.entityId + ", passive=" + this.passive + ")";
+        return "com.leanthoughts.sky.resources.BaseResource(uid=" + this.uid + ", passive=" + this.passive + ")";
     }
 }
