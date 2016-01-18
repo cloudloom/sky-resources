@@ -8,7 +8,7 @@ import java.util.Date;
  * Created by sadath on 01-Jan-2016.
  */
 public class FlightResource extends BaseResource {
-    private String uid;
+    private String flightUid;
     private String connId;
     private Date flightDate;
     @JsonFormat(pattern = "HH:mm:ss")
@@ -29,8 +29,8 @@ public class FlightResource extends BaseResource {
     public FlightResource() {
     }
 
-    public String getId() {
-        return this.uid;
+    public String getFlightUid() {
+        return this.flightUid;
     }
 
     public String getConnId() {
@@ -81,8 +81,8 @@ public class FlightResource extends BaseResource {
         return this.schedule;
     }
 
-    public void setId(String id) {
-        this.uid = id;
+    public void setFlightUid(String id) {
+        this.flightUid = id;
     }
 
     public void setConnId(String connId) {
@@ -138,8 +138,8 @@ public class FlightResource extends BaseResource {
         if (!(o instanceof FlightResource)) return false;
         final FlightResource other = (FlightResource) o;
         if (!other.canEqual((Object) this)) return false;
-        final Object this$id = this.uid;
-        final Object other$id = other.uid;
+        final Object this$id = this.flightUid;
+        final Object other$id = other.flightUid;
         if (this$id == null ? other$id != null : !this$id.equals(other$id)) return false;
         final Object this$connId = this.connId;
         final Object other$connId = other.connId;
@@ -185,7 +185,7 @@ public class FlightResource extends BaseResource {
     public int hashCode() {
         final int PRIME = 59;
         int result = 1;
-        final Object $id = this.uid;
+        final Object $id = this.flightUid;
         result = result * PRIME + ($id == null ? 0 : $id.hashCode());
         final Object $connId = this.connId;
         result = result * PRIME + ($connId == null ? 0 : $connId.hashCode());
@@ -219,6 +219,6 @@ public class FlightResource extends BaseResource {
     }
 
     public String toString() {
-        return "com.leanthoughts.sky.resources.FlightResource(id=" + this.uid + ", connId=" + this.connId + ", flightDate=" + this.flightDate + ", eta=" + this.eta + ", etd=" + this.etd + ", fromAirport=" + this.fromAirport + ", toAirport=" + this.toAirport + ", operator=" + this.operator + ", sta=" + this.sta + ", std=" + this.std + ", period=" + this.period + ", plane=" + this.plane + ", schedule=" + this.schedule + ")";
+        return "com.leanthoughts.sky.resources.FlightResource(id=" + this.flightUid + ", connId=" + this.connId + ", flightDate=" + this.flightDate + ", eta=" + this.eta + ", etd=" + this.etd + ", fromAirport=" + this.fromAirport + ", toAirport=" + this.toAirport + ", operator=" + this.operator + ", sta=" + this.sta + ", std=" + this.std + ", period=" + this.period + ", plane=" + this.plane + ", schedule=" + this.schedule + ")";
     }
 }
