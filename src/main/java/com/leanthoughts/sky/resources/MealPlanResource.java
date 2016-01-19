@@ -58,10 +58,6 @@ public class MealPlanResource extends BaseResource {
         this.mealPlanLineItems = mealPlanLineItems;
     }
 
-    public String toString() {
-        return "com.leanthoughts.sky.api.gateway.resources.MealPlanResource(description=" + this.description + ", flights=" + this.flights + ", flightMetaData=" + this.flightMetaData + ", mealPlanPlanningCriterias=" + this.mealPlanPlanningCriterias + ", mealPlanLineItems=" + this.mealPlanLineItems + ")";
-    }
-
     public boolean equals(Object o) {
         if (o == this) return true;
         if (!(o instanceof MealPlanResource)) return false;
