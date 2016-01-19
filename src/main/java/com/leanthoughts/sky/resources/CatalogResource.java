@@ -100,8 +100,4 @@ public class CatalogResource extends BaseResource {
     protected boolean canEqual(Object other) {
         return other instanceof CatalogResource;
     }
-
-    public String toString() {
-        return "com.leanthoughts.sky.resources.CatalogResource(name=" + this.name + ", description=" + this.description + ", published=" + this.published + ", articles=" + this.articles + ", seller=" + this.seller + ")";
-    }
 }

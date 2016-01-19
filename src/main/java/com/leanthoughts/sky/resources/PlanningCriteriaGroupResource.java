@@ -96,8 +96,4 @@ public class PlanningCriteriaGroupResource extends BaseResource {
     protected boolean canEqual(Object other) {
         return other instanceof PlanningCriteriaGroupResource;
     }
-
-    public String toString() {
-        return "com.leanthoughts.sky.resources.PlanningCriteriaGroupResource(name=" + this.name + ", products=" + this.products + ", productsMetaData=" + this.productsMetaData + ", mealCategories=" + this.mealCategories + ")";
-    }
 }

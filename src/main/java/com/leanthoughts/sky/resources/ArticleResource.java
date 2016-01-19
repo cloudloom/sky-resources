@@ -125,8 +125,4 @@ public class ArticleResource extends ProductResource {
     protected boolean canEqual(Object other) {
         return other instanceof ArticleResource;
     }
-
-    public String toString() {
-        return "com.leanthoughts.sky.resources.ArticleResource(sku=" + this.getSku() + ", ean=" + this.getEan() + ", longDescription=" + this.getLongDescription() + ", price=" + this.getPrice() + ", image=" + this.getImage() + ", id=" + this.getId() + ", categories=" + this.getCategories() + ")";
-    }
 }

@@ -217,8 +217,4 @@ public class FlightResource extends BaseResource {
     protected boolean canEqual(Object other) {
         return other instanceof FlightResource;
     }
-
-    public String toString() {
-        return "com.leanthoughts.sky.resources.FlightResource(id=" + this.flightUid + ", connId=" + this.connId + ", flightDate=" + this.flightDate + ", eta=" + this.eta + ", etd=" + this.etd + ", fromAirport=" + this.fromAirport + ", toAirport=" + this.toAirport + ", operator=" + this.operator + ", sta=" + this.sta + ", std=" + this.std + ", period=" + this.period + ", plane=" + this.plane + ", schedule=" + this.schedule + ")";
-    }
 }

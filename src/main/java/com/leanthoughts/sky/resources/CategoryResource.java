@@ -83,7 +83,4 @@ public class CategoryResource extends BaseResource{
         return other instanceof CategoryResource;
     }
 
-    public String toString() {
-        return "com.leanthoughts.sky.resources.CategoryResource(name=" + this.name + ", description=" + this.description + ", parent=" + this.parent + ", seller=" + this.seller + ")";
-    }
 }

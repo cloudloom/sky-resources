@@ -29,10 +29,6 @@ public class MealPlanPlanningCriteriaResource extends BaseResource {
         this.planningCriteriaAttributes = planningCriteriaAttributes;
     }
 
-    public String toString() {
-        return "com.leanthoughts.sky.resources.MealPlanPlanningCriteriaResource(planningCriteria=" + this.planningCriteria + ", planningCriteriaAttributes=" + this.planningCriteriaAttributes + ")";
-    }
-
     public boolean equals(Object o) {
         if (o == this) return true;
         if (!(o instanceof MealPlanPlanningCriteriaResource)) return false;

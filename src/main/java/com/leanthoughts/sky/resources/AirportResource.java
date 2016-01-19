@@ -314,8 +314,4 @@ public class AirportResource extends BaseResource {
     protected boolean canEqual(Object other) {
         return other instanceof AirportResource;
     }
-
-    public String toString() {
-        return "com.leanthoughts.sky.resources.AirportResource(fs=" + this.fs + ", iata=" + this.iata + ", icao=" + this.icao + ", name=" + this.name + ", street=" + this.street + ", city=" + this.city + ", cityCode=" + this.cityCode + ", countryCode=" + this.countryCode + ", countryName=" + this.countryName + ", regionName=" + this.regionName + ", timeZoneRegionName=" + this.timeZoneRegionName + ", localTime=" + this.localTime + ", utcOffsetHours=" + this.utcOffsetHours + ", latitude=" + this.latitude + ", longitude=" + this.longitude + ", elevationFeet=" + this.elevationFeet + ", classification=" + this.classification + ", active=" + this.active + ", delayIndexUrl=" + this.delayIndexUrl + ", weatherUrl=" + this.weatherUrl + ")";
-    }
 }

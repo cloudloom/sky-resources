@@ -243,8 +243,4 @@ public class PlaneResource extends BaseResource {
     protected boolean canEqual(Object other) {
         return other instanceof PlaneResource;
     }
-
-    public String toString() {
-        return "com.leanthoughts.sky.resources.PlaneResource(type=" + this.type + ", maxEconomyClass=" + this.maxEconomyClass + ", maxBusinessClass=" + this.maxBusinessClass + ", maxFirstClass=" + this.maxFirstClass + ", avgConsumption=" + this.avgConsumption + ", unitFuelConsumption=" + this.unitFuelConsumption + ", maxFuelCapacity=" + this.maxFuelCapacity + ", unitFuel=" + this.unitFuel + ", weight=" + this.weight + ", unitWeight=" + this.unitWeight + ", span=" + this.span + ", lengthPlane=" + this.lengthPlane + ", unitLength=" + this.unitLength + ", speed=" + this.speed + ", unitSpeed=" + this.unitSpeed + ", manufacturer=" + this.manufacturer + ", owner=" + this.owner + ")";
-    }
 }

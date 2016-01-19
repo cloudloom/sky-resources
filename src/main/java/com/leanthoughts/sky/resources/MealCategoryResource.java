@@ -128,8 +128,4 @@ public class MealCategoryResource extends BaseResource {
     protected boolean canEqual(Object other) {
         return other instanceof MealCategoryResource;
     }
-
-    public String toString() {
-        return "com.leanthoughts.sky.resources.MealCategoryResource(serialNumber=" + this.serialNumber + ", code=" + this.code + ", description=" + this.description + ", enabled=" + this.enabled + ", parent=" + this.parent + ", children=" + this.children + ", products=" + this.products + ", productsMetaData=" + this.productsMetaData + ")";
-    }
 }

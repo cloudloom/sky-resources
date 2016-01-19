@@ -210,7 +210,4 @@ public class ScheduleResource extends BaseResource {
         return other instanceof ScheduleResource;
     }
 
-    public String toString() {
-        return "com.leanthoughts.sky.resources.ScheduleResource(operator=" + this.operator + ", connId=" + this.connId + ", country=" + this.country + ", cityFrom=" + this.cityFrom + ", airportFrom=" + this.airportFrom + ", cityTo=" + this.cityTo + ", airportTo=" + this.airportTo + ", std=" + this.std + ", sta=" + this.sta + ", distance=" + this.distance + ", unitDistance=" + this.unitDistance + ", flightType=" + this.flightType + ", period=" + this.period + ")";
-    }
 }

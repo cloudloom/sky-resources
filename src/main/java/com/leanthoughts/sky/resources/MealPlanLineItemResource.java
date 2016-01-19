@@ -40,10 +40,6 @@ public class MealPlanLineItemResource extends BaseResource {
         this.productMetaData = productMetaData;
     }
 
-    public String toString() {
-        return "com.leanthoughts.sky.api.gateway.resources.MealPlanLineItemResource(planningCriteriaGroup=" + this.planningCriteriaGroup + ", products=" + this.products + ", productMetaData=" + this.productMetaData + ")";
-    }
-
     public boolean equals(Object o) {
         if (o == this) return true;
         if (!(o instanceof MealPlanLineItemResource)) return false;

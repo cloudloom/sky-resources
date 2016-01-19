@@ -81,8 +81,4 @@ public class AirlineResource extends BaseResource{
     protected boolean canEqual(Object other) {
         return other instanceof AirlineResource;
     }
-
-    public String toString() {
-        return "com.leanthoughts.sky.resources.AirlineResource(name=" + this.name + ", code=" + this.code + ", currency=" + this.currency + ", url=" + this.url + ")";
-    }
 }

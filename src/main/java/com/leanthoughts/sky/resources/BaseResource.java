@@ -63,7 +63,4 @@ public abstract class BaseResource implements Serializable {
         return other instanceof BaseResource;
     }
 
-    public String toString() {
-        return "com.leanthoughts.sky.resources.BaseResource(uid=" + this.uid + ", passive=" + this.passive + ")";
-    }
 }

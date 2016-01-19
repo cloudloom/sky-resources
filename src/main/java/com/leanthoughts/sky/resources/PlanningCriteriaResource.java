@@ -70,7 +70,4 @@ public class PlanningCriteriaResource extends BaseResource {
         return other instanceof PlanningCriteriaResource;
     }
 
-    public String toString() {
-        return "com.leanthoughts.sky.resources.PlanningCriteriaResource(description=" + this.description + ", active=" + this.active + ", planningCriteriaAttributes=" + this.planningCriteriaAttributes + ")";
-    }
 }

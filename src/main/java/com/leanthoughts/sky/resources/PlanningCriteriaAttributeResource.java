@@ -56,7 +56,4 @@ public class PlanningCriteriaAttributeResource extends BaseResource {
         return other instanceof PlanningCriteriaAttributeResource;
     }
 
-    public String toString() {
-        return "com.leanthoughts.sky.api.gateway.resources.PlanningCriteriaAttributeResource(code=" + this.code + ", valueSource=" + this.valueSource + ")";
-    }
 }
