@@ -11,9 +11,9 @@ import java.util.Set;
 public class MealPlanResource extends BaseResource {
     private String description;
     private Set<String> flights = new HashSet<String>(0);
-    private Map<String, FlightResource> flightMetaData = new HashMap<String, FlightResource>();
-    private Set<MealPlanPlanningCriteriaResource> mealPlanPlanningCriterias = new HashSet<MealPlanPlanningCriteriaResource>();
-    private Set<MealPlanLineItemResource> mealPlanLineItems = new HashSet<MealPlanLineItemResource>();
+    private Map<String, FlightResource> flightMetaData = new HashMap<String, FlightResource>(0);
+    private Set<MealPlanPlanningCriteriaResource> mealPlanPlanningCriterias = new HashSet<MealPlanPlanningCriteriaResource>(0);
+    private Set<MealPlanLineItemResource> mealPlanLineItems = new HashSet<MealPlanLineItemResource>(0);
 
     public MealPlanResource() {
     }

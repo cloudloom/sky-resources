@@ -29,18 +29,18 @@ public class MealPlanPlanningCriteriaResource extends BaseResource {
         this.planningCriteriaAttributes = planningCriteriaAttributes;
     }
 
+    public String toString() {
+        return "com.leanthoughts.sky.resources.MealPlanPlanningCriteriaResource(planningCriteria=" + this.planningCriteria + ", planningCriteriaAttributes=" + this.planningCriteriaAttributes + ")";
+    }
+
     public boolean equals(Object o) {
         if (o == this) return true;
         if (!(o instanceof MealPlanPlanningCriteriaResource)) return false;
         final MealPlanPlanningCriteriaResource other = (MealPlanPlanningCriteriaResource) o;
         if (!other.canEqual((Object) this)) return false;
-        final Object this$planningCriteria = this.planningCriteria;
-        final Object other$planningCriteria = other.planningCriteria;
+        final Object this$planningCriteria = this.getPlanningCriteria();
+        final Object other$planningCriteria = other.getPlanningCriteria();
         if (this$planningCriteria == null ? other$planningCriteria != null : !this$planningCriteria.equals(other$planningCriteria))
-            return false;
-        final Object this$planningCriteriaAttributes = this.planningCriteriaAttributes;
-        final Object other$planningCriteriaAttributes = other.planningCriteriaAttributes;
-        if (this$planningCriteriaAttributes == null ? other$planningCriteriaAttributes != null : !this$planningCriteriaAttributes.equals(other$planningCriteriaAttributes))
             return false;
         return true;
     }
@@ -48,18 +48,12 @@ public class MealPlanPlanningCriteriaResource extends BaseResource {
     public int hashCode() {
         final int PRIME = 59;
         int result = 1;
-        final Object $planningCriteria = this.planningCriteria;
+        final Object $planningCriteria = this.getPlanningCriteria();
         result = result * PRIME + ($planningCriteria == null ? 0 : $planningCriteria.hashCode());
-        final Object $planningCriteriaAttributes = this.planningCriteriaAttributes;
-        result = result * PRIME + ($planningCriteriaAttributes == null ? 0 : $planningCriteriaAttributes.hashCode());
         return result;
     }
 
     protected boolean canEqual(Object other) {
         return other instanceof MealPlanPlanningCriteriaResource;
-    }
-
-    public String toString() {
-        return "com.leanthoughts.sky.api.gateway.resources.MealPlanPlanningCriteriaResource(planningCriteria=" + this.planningCriteria + ", planningCriteriaAttributes=" + this.planningCriteriaAttributes + ")";
     }
 }
