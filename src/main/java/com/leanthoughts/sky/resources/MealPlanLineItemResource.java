@@ -10,7 +10,7 @@ import java.util.Set;
  */
 public class MealPlanLineItemResource extends BaseResource {
     private PlanningCriteriaGroupResource planningCriteriaGroup;
-    private Set<String> products = new HashSet<String>();
+    private Set<MealPlanProductResource> products = new HashSet<MealPlanProductResource>();
     private Map<String, ProductResource> productMetaData = new HashMap<String, ProductResource>();
 
     public MealPlanLineItemResource() {
@@ -20,7 +20,7 @@ public class MealPlanLineItemResource extends BaseResource {
         return this.planningCriteriaGroup;
     }
 
-    public Set<String> getProducts() {
+    public Set<MealPlanProductResource> getProducts() {
         return this.products;
     }
 
@@ -32,7 +32,7 @@ public class MealPlanLineItemResource extends BaseResource {
         this.planningCriteriaGroup = planningCriteriaGroup;
     }
 
-    public void setProducts(Set<String> products) {
+    public void setProducts(Set<MealPlanProductResource> products) {
         this.products = products;
     }
 
