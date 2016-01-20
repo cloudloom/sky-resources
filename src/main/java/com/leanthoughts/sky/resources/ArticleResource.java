@@ -14,6 +14,7 @@ public class ArticleResource extends ProductResource {
     private String image;
     private String id;
     private Set<CategoryResource> categories = new HashSet<CategoryResource>(0);
+    private Set<MealCategoryResource> mealCategories = new HashSet<MealCategoryResource>(0);
 
     public ArticleResource() {
     }
@@ -34,8 +35,20 @@ public class ArticleResource extends ProductResource {
         return this.price;
     }
 
+    public String getImage() {
+        return this.image;
+    }
+
+    public String getId() {
+        return this.id;
+    }
+
     public Set<CategoryResource> getCategories() {
         return this.categories;
+    }
+
+    public Set<MealCategoryResource> getMealCategories() {
+        return this.mealCategories;
     }
 
     public void setSku(String sku) {
@@ -54,21 +67,20 @@ public class ArticleResource extends ProductResource {
         this.price = price;
     }
 
-    public void setCategories(Set<CategoryResource> categories) {
-        this.categories = categories;
-    }
-
-    public String getImage(){return this.image;}
-
-    public String getId(){return this.id;}
-
-
     public void setImage(String image) {
         this.image = image;
     }
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public void setCategories(Set<CategoryResource> categories) {
+        this.categories = categories;
+    }
+
+    public void setMealCategories(Set<MealCategoryResource> mealCategories) {
+        this.mealCategories = mealCategories;
     }
 
     public boolean equals(Object o) {
@@ -95,10 +107,6 @@ public class ArticleResource extends ProductResource {
         final Object this$id = this.getId();
         final Object other$id = other.getId();
         if (this$id == null ? other$id != null : !this$id.equals(other$id)) return false;
-        final Object this$categories = this.getCategories();
-        final Object other$categories = other.getCategories();
-        if (this$categories == null ? other$categories != null : !this$categories.equals(other$categories))
-            return false;
         return true;
     }
 
@@ -117,8 +125,6 @@ public class ArticleResource extends ProductResource {
         result = result * PRIME + ($image == null ? 0 : $image.hashCode());
         final Object $id = this.getId();
         result = result * PRIME + ($id == null ? 0 : $id.hashCode());
-        final Object $categories = this.getCategories();
-        result = result * PRIME + ($categories == null ? 0 : $categories.hashCode());
         return result;
     }
 
