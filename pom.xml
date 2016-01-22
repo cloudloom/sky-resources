@@ -6,7 +6,7 @@
 
     <groupId>com.tracebucket.x1.sky.resources</groupId>
     <artifactId>sky-resources</artifactId>
-    <version>1.3</version>
+    <version>1.4</version>
 
     <properties>
         <java.version>1.8</java.version>

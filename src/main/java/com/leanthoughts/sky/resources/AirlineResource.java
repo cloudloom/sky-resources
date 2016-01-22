@@ -12,6 +12,10 @@ public class AirlineResource extends BaseResource{
     public AirlineResource() {
     }
 
+    public AirlineResource(String name) {
+        this.name = name;
+    }
+
     public String getName() {
         return this.name;
     }
