@@ -19,6 +19,10 @@ public class MealPlanResource extends BaseResource {
     public MealPlanResource() {
     }
 
+    public TenantResource getTenant() {
+        return this.tenant;
+    }
+
     public String getDescription() {
         return this.description;
     }
@@ -37,6 +41,10 @@ public class MealPlanResource extends BaseResource {
 
     public Set<MealPlanLineItemResource> getMealPlanLineItems() {
         return this.mealPlanLineItems;
+    }
+
+    public void setTenant(TenantResource tenant) {
+        this.tenant = tenant;
     }
 
     public void setDescription(String description) {
@@ -64,6 +72,9 @@ public class MealPlanResource extends BaseResource {
         if (!(o instanceof MealPlanResource)) return false;
         final MealPlanResource other = (MealPlanResource) o;
         if (!other.canEqual((Object) this)) return false;
+        final Object this$tenant = this.getTenant();
+        final Object other$tenant = other.getTenant();
+        if (this$tenant == null ? other$tenant != null : !this$tenant.equals(other$tenant)) return false;
         final Object this$description = this.getDescription();
         final Object other$description = other.getDescription();
         if (this$description == null ? other$description != null : !this$description.equals(other$description))
@@ -85,6 +96,8 @@ public class MealPlanResource extends BaseResource {
     public int hashCode() {
         final int PRIME = 59;
         int result = 1;
+        final Object $tenant = this.getTenant();
+        result = result * PRIME + ($tenant == null ? 0 : $tenant.hashCode());
         final Object $description = this.getDescription();
         result = result * PRIME + ($description == null ? 0 : $description.hashCode());
         final Object $flights = this.getFlights();
