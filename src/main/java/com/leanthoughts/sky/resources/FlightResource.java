@@ -8,6 +8,7 @@ import java.util.Date;
  * Created by sadath on 01-Jan-2016.
  */
 public class FlightResource extends BaseResource {
+
     private String flightUid;
     private String connId;
     private Date flightDate;
@@ -15,14 +16,18 @@ public class FlightResource extends BaseResource {
     private Date eta;
     @JsonFormat(pattern = "HH:mm:ss")
     private Date etd;
-    private AirportResource fromAirport;
-    private AirportResource toAirport;
-    private AirlineResource operator;
+    private String fromAirportCode;
+    private String fromAirportName;
+    private String toAirportCode;
+    private String toAirportName;
+    private String operator;
     @JsonFormat(pattern = "HH:mm:ss")
     private Date sta;
     @JsonFormat(pattern = "HH:mm:ss")
     private Date std;
     private String period;
+    private String equipment;
+    private String flightType;
     private PlaneResource plane;
     private ScheduleResource schedule;
 
@@ -30,191 +35,216 @@ public class FlightResource extends BaseResource {
     }
 
     public String getFlightUid() {
-        return this.flightUid;
+        return flightUid;
+    }
+
+    public void setFlightUid(String flightUid) {
+        this.flightUid = flightUid;
     }
 
     public String getConnId() {
-        return this.connId;
-    }
-
-    public Date getFlightDate() {
-        return this.flightDate;
-    }
-
-    public Date getEta() {
-        return this.eta;
-    }
-
-    public Date getEtd() {
-        return this.etd;
-    }
-
-    public AirportResource getFromAirport() {
-        return this.fromAirport;
-    }
-
-    public AirportResource getToAirport() {
-        return this.toAirport;
-    }
-
-    public AirlineResource getOperator() {
-        return this.operator;
-    }
-
-    public Date getSta() {
-        return this.sta;
-    }
-
-    public Date getStd() {
-        return this.std;
-    }
-
-    public String getPeriod() {
-        return this.period;
-    }
-
-    public PlaneResource getPlane() {
-        return this.plane;
-    }
-
-    public ScheduleResource getSchedule() {
-        return this.schedule;
-    }
-
-    public void setFlightUid(String id) {
-        this.flightUid = id;
+        return connId;
     }
 
     public void setConnId(String connId) {
         this.connId = connId;
     }
 
+    public Date getFlightDate() {
+        return flightDate;
+    }
+
     public void setFlightDate(Date flightDate) {
         this.flightDate = flightDate;
+    }
+
+    public Date getEta() {
+        return eta;
     }
 
     public void setEta(Date eta) {
         this.eta = eta;
     }
 
+    public Date getEtd() {
+        return etd;
+    }
+
     public void setEtd(Date etd) {
         this.etd = etd;
     }
 
-    public void setFromAirport(AirportResource fromAirport) {
-        this.fromAirport = fromAirport;
+    public String getFromAirportCode() {
+        return fromAirportCode;
     }
 
-    public void setToAirport(AirportResource toAirport) {
-        this.toAirport = toAirport;
+    public void setFromAirportCode(String fromAirportCode) {
+        this.fromAirportCode = fromAirportCode;
     }
 
-    public void setOperator(AirlineResource operator) {
+    public String getFromAirportName() {
+        return fromAirportName;
+    }
+
+    public void setFromAirportName(String fromAirportName) {
+        this.fromAirportName = fromAirportName;
+    }
+
+    public String getToAirportCode() {
+        return toAirportCode;
+    }
+
+    public void setToAirportCode(String toAirportCode) {
+        this.toAirportCode = toAirportCode;
+    }
+
+    public String getToAirportName() {
+        return toAirportName;
+    }
+
+    public void setToAirportName(String toAirportName) {
+        this.toAirportName = toAirportName;
+    }
+
+    public String getOperator() {
+        return operator;
+    }
+
+    public void setOperator(String operator) {
         this.operator = operator;
+    }
+
+    public Date getSta() {
+        return sta;
     }
 
     public void setSta(Date sta) {
         this.sta = sta;
     }
 
+    public Date getStd() {
+        return std;
+    }
+
     public void setStd(Date std) {
         this.std = std;
+    }
+
+    public String getPeriod() {
+        return period;
     }
 
     public void setPeriod(String period) {
         this.period = period;
     }
 
+    public String getEquipment() {
+        return equipment;
+    }
+
+    public void setEquipment(String equipment) {
+        this.equipment = equipment;
+    }
+
+    public String getFlightType() {
+        return flightType;
+    }
+
+    public void setFlightType(String flightType) {
+        this.flightType = flightType;
+    }
+
+    public PlaneResource getPlane() {
+        return plane;
+    }
+
     public void setPlane(PlaneResource plane) {
         this.plane = plane;
+    }
+
+    public ScheduleResource getSchedule() {
+        return schedule;
     }
 
     public void setSchedule(ScheduleResource schedule) {
         this.schedule = schedule;
     }
 
+    @Override
     public boolean equals(Object o) {
-        if (o == this) return true;
-        if (!(o instanceof FlightResource)) return false;
-        final FlightResource other = (FlightResource) o;
-        if (!other.canEqual((Object) this)) return false;
-        final Object this$id = this.flightUid;
-        final Object other$id = other.flightUid;
-        if (this$id == null ? other$id != null : !this$id.equals(other$id)) return false;
-        final Object this$connId = this.connId;
-        final Object other$connId = other.connId;
-        if (this$connId == null ? other$connId != null : !this$connId.equals(other$connId)) return false;
-        final Object this$flightDate = this.flightDate;
-        final Object other$flightDate = other.flightDate;
-        if (this$flightDate == null ? other$flightDate != null : !this$flightDate.equals(other$flightDate))
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+
+        FlightResource that = (FlightResource) o;
+
+        if (flightUid != null ? !flightUid.equals(that.flightUid) : that.flightUid != null) return false;
+        if (connId != null ? !connId.equals(that.connId) : that.connId != null) return false;
+        if (flightDate != null ? !flightDate.equals(that.flightDate) : that.flightDate != null) return false;
+        if (eta != null ? !eta.equals(that.eta) : that.eta != null) return false;
+        if (etd != null ? !etd.equals(that.etd) : that.etd != null) return false;
+        if (fromAirportCode != null ? !fromAirportCode.equals(that.fromAirportCode) : that.fromAirportCode != null)
             return false;
-        final Object this$eta = this.eta;
-        final Object other$eta = other.eta;
-        if (this$eta == null ? other$eta != null : !this$eta.equals(other$eta)) return false;
-        final Object this$etd = this.etd;
-        final Object other$etd = other.etd;
-        if (this$etd == null ? other$etd != null : !this$etd.equals(other$etd)) return false;
-        final Object this$fromAirport = this.fromAirport;
-        final Object other$fromAirport = other.fromAirport;
-        if (this$fromAirport == null ? other$fromAirport != null : !this$fromAirport.equals(other$fromAirport))
+        if (fromAirportName != null ? !fromAirportName.equals(that.fromAirportName) : that.fromAirportName != null)
             return false;
-        final Object this$toAirport = this.toAirport;
-        final Object other$toAirport = other.toAirport;
-        if (this$toAirport == null ? other$toAirport != null : !this$toAirport.equals(other$toAirport)) return false;
-        final Object this$operator = this.operator;
-        final Object other$operator = other.operator;
-        if (this$operator == null ? other$operator != null : !this$operator.equals(other$operator)) return false;
-        final Object this$sta = this.sta;
-        final Object other$sta = other.sta;
-        if (this$sta == null ? other$sta != null : !this$sta.equals(other$sta)) return false;
-        final Object this$std = this.std;
-        final Object other$std = other.std;
-        if (this$std == null ? other$std != null : !this$std.equals(other$std)) return false;
-        final Object this$period = this.period;
-        final Object other$period = other.period;
-        if (this$period == null ? other$period != null : !this$period.equals(other$period)) return false;
-        final Object this$plane = this.plane;
-        final Object other$plane = other.plane;
-        if (this$plane == null ? other$plane != null : !this$plane.equals(other$plane)) return false;
-        final Object this$schedule = this.schedule;
-        final Object other$schedule = other.schedule;
-        if (this$schedule == null ? other$schedule != null : !this$schedule.equals(other$schedule)) return false;
-        return true;
+        if (toAirportCode != null ? !toAirportCode.equals(that.toAirportCode) : that.toAirportCode != null)
+            return false;
+        if (toAirportName != null ? !toAirportName.equals(that.toAirportName) : that.toAirportName != null)
+            return false;
+        if (operator != null ? !operator.equals(that.operator) : that.operator != null) return false;
+        if (sta != null ? !sta.equals(that.sta) : that.sta != null) return false;
+        if (std != null ? !std.equals(that.std) : that.std != null) return false;
+        if (period != null ? !period.equals(that.period) : that.period != null) return false;
+        if (equipment != null ? !equipment.equals(that.equipment) : that.equipment != null) return false;
+        if (flightType != null ? !flightType.equals(that.flightType) : that.flightType != null) return false;
+        if (plane != null ? !plane.equals(that.plane) : that.plane != null) return false;
+        return schedule != null ? schedule.equals(that.schedule) : that.schedule == null;
+
     }
 
+    @Override
     public int hashCode() {
-        final int PRIME = 59;
-        int result = 1;
-        final Object $id = this.flightUid;
-        result = result * PRIME + ($id == null ? 0 : $id.hashCode());
-        final Object $connId = this.connId;
-        result = result * PRIME + ($connId == null ? 0 : $connId.hashCode());
-        final Object $flightDate = this.flightDate;
-        result = result * PRIME + ($flightDate == null ? 0 : $flightDate.hashCode());
-        final Object $eta = this.eta;
-        result = result * PRIME + ($eta == null ? 0 : $eta.hashCode());
-        final Object $etd = this.etd;
-        result = result * PRIME + ($etd == null ? 0 : $etd.hashCode());
-        final Object $fromAirport = this.fromAirport;
-        result = result * PRIME + ($fromAirport == null ? 0 : $fromAirport.hashCode());
-        final Object $toAirport = this.toAirport;
-        result = result * PRIME + ($toAirport == null ? 0 : $toAirport.hashCode());
-        final Object $operator = this.operator;
-        result = result * PRIME + ($operator == null ? 0 : $operator.hashCode());
-        final Object $sta = this.sta;
-        result = result * PRIME + ($sta == null ? 0 : $sta.hashCode());
-        final Object $std = this.std;
-        result = result * PRIME + ($std == null ? 0 : $std.hashCode());
-        final Object $period = this.period;
-        result = result * PRIME + ($period == null ? 0 : $period.hashCode());
-        final Object $plane = this.plane;
-        result = result * PRIME + ($plane == null ? 0 : $plane.hashCode());
-        final Object $schedule = this.schedule;
-        result = result * PRIME + ($schedule == null ? 0 : $schedule.hashCode());
+        int result = super.hashCode();
+        result = 31 * result + (flightUid != null ? flightUid.hashCode() : 0);
+        result = 31 * result + (connId != null ? connId.hashCode() : 0);
+        result = 31 * result + (flightDate != null ? flightDate.hashCode() : 0);
+        result = 31 * result + (eta != null ? eta.hashCode() : 0);
+        result = 31 * result + (etd != null ? etd.hashCode() : 0);
+        result = 31 * result + (fromAirportCode != null ? fromAirportCode.hashCode() : 0);
+        result = 31 * result + (fromAirportName != null ? fromAirportName.hashCode() : 0);
+        result = 31 * result + (toAirportCode != null ? toAirportCode.hashCode() : 0);
+        result = 31 * result + (toAirportName != null ? toAirportName.hashCode() : 0);
+        result = 31 * result + (operator != null ? operator.hashCode() : 0);
+        result = 31 * result + (sta != null ? sta.hashCode() : 0);
+        result = 31 * result + (std != null ? std.hashCode() : 0);
+        result = 31 * result + (period != null ? period.hashCode() : 0);
+        result = 31 * result + (equipment != null ? equipment.hashCode() : 0);
+        result = 31 * result + (flightType != null ? flightType.hashCode() : 0);
+        result = 31 * result + (plane != null ? plane.hashCode() : 0);
+        result = 31 * result + (schedule != null ? schedule.hashCode() : 0);
         return result;
     }
 
-    protected boolean canEqual(Object other) {
-        return other instanceof FlightResource;
+    @Override
+    public String toString() {
+        return "FlightResource{" +
+                "flightUid='" + flightUid + '\'' +
+                ", connId='" + connId + '\'' +
+                ", flightDate=" + flightDate +
+                ", eta=" + eta +
+                ", etd=" + etd +
+                ", fromAirportCode='" + fromAirportCode + '\'' +
+                ", fromAirportName='" + fromAirportName + '\'' +
+                ", toAirportCode='" + toAirportCode + '\'' +
+                ", toAirportName='" + toAirportName + '\'' +
+                ", operator=" + operator +
+                ", sta=" + sta +
+                ", std=" + std +
+                ", period='" + period + '\'' +
+                ", equipment='" + equipment + '\'' +
+                ", flightType='" + flightType + '\'' +
+                ", plane=" + plane +
+                ", schedule=" + schedule +
+                '}';
     }
 }
