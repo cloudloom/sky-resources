@@ -1,12 +1,14 @@
 package com.leanthoughts.sky.resources;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * Created by sadath on 25-Jan-2016.
  */
 public class MealPlanProjectionItemResource extends BaseResource {
     private MealPlanLineItemResource mealPlanLineItem;
-    private String product;
-    private Double quantity;
+    private Set<MealPlanProductProjectionResource> projections = new HashSet<MealPlanProductProjectionResource>(0);
 
     public MealPlanProjectionItemResource() {
     }
@@ -15,24 +17,16 @@ public class MealPlanProjectionItemResource extends BaseResource {
         return this.mealPlanLineItem;
     }
 
-    public String getProduct() {
-        return this.product;
-    }
-
-    public Double getQuantity() {
-        return this.quantity;
+    public Set<MealPlanProductProjectionResource> getProjections() {
+        return this.projections;
     }
 
     public void setMealPlanLineItem(MealPlanLineItemResource mealPlanLineItem) {
         this.mealPlanLineItem = mealPlanLineItem;
     }
 
-    public void setProduct(String product) {
-        this.product = product;
-    }
-
-    public void setQuantity(Double quantity) {
-        this.quantity = quantity;
+    public void setProjections(Set<MealPlanProductProjectionResource> projections) {
+        this.projections = projections;
     }
 
     public boolean equals(Object o) {
@@ -44,12 +38,10 @@ public class MealPlanProjectionItemResource extends BaseResource {
         final Object other$mealPlanLineItem = other.mealPlanLineItem;
         if (this$mealPlanLineItem == null ? other$mealPlanLineItem != null : !this$mealPlanLineItem.equals(other$mealPlanLineItem))
             return false;
-        final Object this$product = this.product;
-        final Object other$product = other.product;
-        if (this$product == null ? other$product != null : !this$product.equals(other$product)) return false;
-        final Object this$quantity = this.quantity;
-        final Object other$quantity = other.quantity;
-        if (this$quantity == null ? other$quantity != null : !this$quantity.equals(other$quantity)) return false;
+        final Object this$projections = this.projections;
+        final Object other$projections = other.projections;
+        if (this$projections == null ? other$projections != null : !this$projections.equals(other$projections))
+            return false;
         return true;
     }
 
@@ -58,10 +50,8 @@ public class MealPlanProjectionItemResource extends BaseResource {
         int result = 1;
         final Object $mealPlanLineItem = this.mealPlanLineItem;
         result = result * PRIME + ($mealPlanLineItem == null ? 0 : $mealPlanLineItem.hashCode());
-        final Object $product = this.product;
-        result = result * PRIME + ($product == null ? 0 : $product.hashCode());
-        final Object $quantity = this.quantity;
-        result = result * PRIME + ($quantity == null ? 0 : $quantity.hashCode());
+        final Object $projections = this.projections;
+        result = result * PRIME + ($projections == null ? 0 : $projections.hashCode());
         return result;
     }
 
