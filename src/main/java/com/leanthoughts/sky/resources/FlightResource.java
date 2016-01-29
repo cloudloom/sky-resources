@@ -30,8 +30,17 @@ public class FlightResource extends BaseResource {
     private String flightType;
     private PlaneResource plane;
     private ScheduleResource schedule;
+    private Boolean BOBStatus;
 
     public FlightResource() {
+    }
+
+    public Boolean getBOBStatus() {
+        return BOBStatus;
+    }
+
+    public void setBOBStatus(Boolean BOBStatus) {
+        this.BOBStatus = BOBStatus;
     }
 
     public String getFlightUid() {
