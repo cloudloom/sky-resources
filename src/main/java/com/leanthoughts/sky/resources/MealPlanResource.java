@@ -11,6 +11,7 @@ import java.util.Set;
 public class MealPlanResource extends BaseResource {
     private TenantResource tenant;
     private String description;
+    private boolean addAllFlights;
     private Set<String> flights = new HashSet<String>(0);
     private Map<String, FlightResource> flightMetaData = new HashMap<String, FlightResource>(0);
     private Set<MealPlanPlanningCriteriaResource> mealPlanPlanningCriterias = new HashSet<MealPlanPlanningCriteriaResource>(0);
@@ -37,6 +38,14 @@ public class MealPlanResource extends BaseResource {
 
     public Set<MealPlanPlanningCriteriaResource> getMealPlanPlanningCriterias() {
         return this.mealPlanPlanningCriterias;
+    }
+
+    public boolean isAddAllFlights() {
+        return addAllFlights;
+    }
+
+    public void setAddAllFlights(boolean addAllFlights) {
+        this.addAllFlights = addAllFlights;
     }
 
     public Set<MealPlanLineItemResource> getMealPlanLineItems() {
