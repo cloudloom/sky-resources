@@ -117,7 +117,6 @@ public class MealPlanResource extends BaseResource {
         result = result * PRIME + ($mealPlanLineItems == null ? 0 : $mealPlanLineItems.hashCode());
         return result;
     }
-
     protected boolean canEqual(Object other) {
         return other instanceof MealPlanResource;
     }
