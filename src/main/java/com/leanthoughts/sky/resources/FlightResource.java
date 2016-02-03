@@ -31,8 +31,26 @@ public class FlightResource extends BaseResource {
     private PlaneResource plane;
     private ScheduleResource schedule;
     private Boolean BOBStatus;
+    private StationResource upliftStation;
+    private StationResource unloadStation;
 
     public FlightResource() {
+    }
+
+    public StationResource getUpliftStation() {
+        return upliftStation;
+    }
+
+    public void setUpliftStation(StationResource upliftStation) {
+        this.upliftStation = upliftStation;
+    }
+
+    public StationResource getUnloadStation() {
+        return unloadStation;
+    }
+
+    public void setUnloadStation(StationResource unloadStation) {
+        this.unloadStation = unloadStation;
     }
 
     public Boolean getBOBStatus() {
@@ -232,28 +250,5 @@ public class FlightResource extends BaseResource {
         result = 31 * result + (plane != null ? plane.hashCode() : 0);
         result = 31 * result + (schedule != null ? schedule.hashCode() : 0);
         return result;
-    }
-
-    @Override
-    public String toString() {
-        return "FlightResource{" +
-                "flightUid='" + flightUid + '\'' +
-                ", connId='" + connId + '\'' +
-                ", flightDate=" + flightDate +
-                ", eta=" + eta +
-                ", etd=" + etd +
-                ", fromAirportCode='" + fromAirportCode + '\'' +
-                ", fromAirportName='" + fromAirportName + '\'' +
-                ", toAirportCode='" + toAirportCode + '\'' +
-                ", toAirportName='" + toAirportName + '\'' +
-                ", operator=" + operator +
-                ", sta=" + sta +
-                ", std=" + std +
-                ", period='" + period + '\'' +
-                ", equipment='" + equipment + '\'' +
-                ", flightType='" + flightType + '\'' +
-                ", plane=" + plane +
-                ", schedule=" + schedule +
-                '}';
     }
 }
