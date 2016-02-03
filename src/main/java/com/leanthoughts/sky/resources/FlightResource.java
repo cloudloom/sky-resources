@@ -1,6 +1,7 @@
 package com.leanthoughts.sky.resources;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnoreType;
 
 import java.util.Date;
 
@@ -31,26 +32,48 @@ public class FlightResource extends BaseResource {
     private PlaneResource plane;
     private ScheduleResource schedule;
     private Boolean BOBStatus;
-    private StationResource upliftStation;
-    private StationResource unloadStation;
+    private Station station;
 
     public FlightResource() {
     }
 
-    public StationResource getUpliftStation() {
-        return upliftStation;
+    @JsonIgnoreType
+    public static class Station {
+        private MealPlanResource mealPlan;
+        private StationResource upliftStation;
+        private StationResource unloadStation;
+
+        public MealPlanResource getMealPlan() {
+            return mealPlan;
+        }
+
+        public void setMealPlan(MealPlanResource mealPlan) {
+            this.mealPlan = mealPlan;
+        }
+
+        public StationResource getUpliftStation() {
+            return upliftStation;
+        }
+
+        public void setUpliftStation(StationResource upliftStation) {
+            this.upliftStation = upliftStation;
+        }
+
+        public StationResource getUnloadStation() {
+            return unloadStation;
+        }
+
+        public void setUnloadStation(StationResource unloadStation) {
+            this.unloadStation = unloadStation;
+        }
     }
 
-    public void setUpliftStation(StationResource upliftStation) {
-        this.upliftStation = upliftStation;
+    public Station getStation() {
+        return station;
     }
 
-    public StationResource getUnloadStation() {
-        return unloadStation;
-    }
-
-    public void setUnloadStation(StationResource unloadStation) {
-        this.unloadStation = unloadStation;
+    public void setStation(Station station) {
+        this.station = station;
     }
 
     public Boolean getBOBStatus() {
