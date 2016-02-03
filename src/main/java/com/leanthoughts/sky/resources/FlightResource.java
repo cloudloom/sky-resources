@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreType;
 
 import java.util.Date;
+import java.util.Set;
 
 /**
  * Created by sadath on 01-Jan-2016.
@@ -32,7 +33,7 @@ public class FlightResource extends BaseResource {
     private PlaneResource plane;
     private ScheduleResource schedule;
     private Boolean BOBStatus;
-    private Station station;
+    private Set<Station> station;
 
     public FlightResource() {
     }
@@ -68,11 +69,11 @@ public class FlightResource extends BaseResource {
         }
     }
 
-    public Station getStation() {
+    public Set<Station> getStation() {
         return station;
     }
 
-    public void setStation(Station station) {
+    public void setStation(Set<Station> station) {
         this.station = station;
     }
 
