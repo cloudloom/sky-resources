@@ -12,9 +12,9 @@ public class FlightSearchResource {
     private String connId;
     private String fromAirport;
     private String toAirport;
-    @JsonFormat(pattern = "dd-MM-yyyy")
+    @JsonFormat(pattern = "yyyy-MM-dd")
     private Date fromDate;
-    @JsonFormat(pattern = "dd-MM-yyyy")
+    @JsonFormat(pattern = "yyyy-MM-dd")
     private Date toDate;
     @JsonFormat(pattern = "HH:mm")
     private Date sta;
