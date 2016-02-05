@@ -9,6 +9,7 @@ public class StationResource extends BaseResource {
     private String code;
     private String name;
     private String airport;
+    private AirportResource airportDetails;
     private String orgUnitID;
 
     public StationResource() {
@@ -54,6 +55,14 @@ public class StationResource extends BaseResource {
 
     public void setOrgUnitID(String orgUnitID) {
         this.orgUnitID = orgUnitID;
+    }
+
+    public AirportResource getAirportDetails() {
+        return airportDetails;
+    }
+
+    public void setAirportDetails(AirportResource airportDetails) {
+        this.airportDetails = airportDetails;
     }
 
     @Override
