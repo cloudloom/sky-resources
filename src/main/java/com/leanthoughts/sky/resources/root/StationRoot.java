@@ -2,7 +2,7 @@ package com.leanthoughts.sky.resources.root;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.leanthoughts.sky.resources.StationResource;
+import com.leanthoughts.sky.resources.planning.StationResource;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -2,7 +2,7 @@ package com.leanthoughts.sky.resources.root;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.leanthoughts.sky.resources.ArticleResource;
+import com.leanthoughts.sky.resources.product.ArticleResource;
 
 import java.util.ArrayList;
 import java.util.List;
