@@ -1,11 +1,13 @@
 package com.leanthoughts.sky.resources.flight;
 
 import com.leanthoughts.sky.resources.BaseResource;
+import com.leanthoughts.sky.resources.TenantResource;
 
 /**
  * Created by sadath on 01-Jan-2016.
  */
 public class AirlineResource extends BaseResource {
+    private TenantResource tenant;
     private String name;
     private String code;
     private String currency;
@@ -14,8 +16,8 @@ public class AirlineResource extends BaseResource {
     public AirlineResource() {
     }
 
-    public AirlineResource(String name) {
-        this.name = name;
+    public TenantResource getTenant() {
+        return this.tenant;
     }
 
     public String getName() {
@@ -32,6 +34,10 @@ public class AirlineResource extends BaseResource {
 
     public String getUrl() {
         return this.url;
+    }
+
+    public void setTenant(TenantResource tenant) {
+        this.tenant = tenant;
     }
 
     public void setName(String name) {
@@ -55,6 +61,9 @@ public class AirlineResource extends BaseResource {
         if (!(o instanceof AirlineResource)) return false;
         final AirlineResource other = (AirlineResource) o;
         if (!other.canEqual((Object) this)) return false;
+        final Object this$tenant = this.tenant;
+        final Object other$tenant = other.tenant;
+        if (this$tenant == null ? other$tenant != null : !this$tenant.equals(other$tenant)) return false;
         final Object this$name = this.name;
         final Object other$name = other.name;
         if (this$name == null ? other$name != null : !this$name.equals(other$name)) return false;
@@ -73,6 +82,8 @@ public class AirlineResource extends BaseResource {
     public int hashCode() {
         final int PRIME = 59;
         int result = 1;
+        final Object $tenant = this.tenant;
+        result = result * PRIME + ($tenant == null ? 0 : $tenant.hashCode());
         final Object $name = this.name;
         result = result * PRIME + ($name == null ? 0 : $name.hashCode());
         final Object $code = this.code;
