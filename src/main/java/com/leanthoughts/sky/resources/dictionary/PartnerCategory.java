@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 public enum PartnerCategory {
     INDIVIDUAL("Individual", "INDIVIDUAL"),
     GROUP("Group", "GROUP"),
-    ORGANIZATION("Organization", "ORGANIZATION");
+    ORGANIZATION("OrganizationResource", "ORGANIZATION");
 
     private final String categoryName;
     private final String abbreviation;
