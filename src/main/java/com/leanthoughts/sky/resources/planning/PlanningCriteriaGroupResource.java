@@ -5,7 +5,6 @@ package com.leanthoughts.sky.resources.planning;
  */
 
 import com.leanthoughts.sky.resources.BaseResource;
-import com.leanthoughts.sky.resources.dictionary.CountType;
 import com.leanthoughts.sky.resources.product.ArticleResource;
 
 import java.util.HashMap;
@@ -22,7 +21,6 @@ import java.util.Set;
  */
 public class PlanningCriteriaGroupResource extends BaseResource {
     private String name;
-    private CountType countType;
     private Set<String> products = new HashSet<String>();
     private Map<String, ArticleResource> productsMetaData = new HashMap<String, ArticleResource>();
     private Set<MealCategoryResource> mealCategories = new HashSet<MealCategoryResource>(0);
@@ -32,10 +30,6 @@ public class PlanningCriteriaGroupResource extends BaseResource {
 
     public String getName() {
         return this.name;
-    }
-
-    public CountType getCountType() {
-        return this.countType;
     }
 
     public Set<String> getProducts() {
@@ -52,10 +46,6 @@ public class PlanningCriteriaGroupResource extends BaseResource {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public void setCountType(CountType countType) {
-        this.countType = countType;
     }
 
     public void setProducts(Set<String> products) {
@@ -78,9 +68,6 @@ public class PlanningCriteriaGroupResource extends BaseResource {
         final Object this$name = this.name;
         final Object other$name = other.name;
         if (this$name == null ? other$name != null : !this$name.equals(other$name)) return false;
-        final Object this$countType = this.countType;
-        final Object other$countType = other.countType;
-        if (this$countType == null ? other$countType != null : !this$countType.equals(other$countType)) return false;
         final Object this$products = this.products;
         final Object other$products = other.products;
         if (this$products == null ? other$products != null : !this$products.equals(other$products)) return false;
@@ -100,8 +87,6 @@ public class PlanningCriteriaGroupResource extends BaseResource {
         int result = 1;
         final Object $name = this.name;
         result = result * PRIME + ($name == null ? 0 : $name.hashCode());
-        final Object $countType = this.countType;
-        result = result * PRIME + ($countType == null ? 0 : $countType.hashCode());
         final Object $products = this.products;
         result = result * PRIME + ($products == null ? 0 : $products.hashCode());
         final Object $productsMetaData = this.productsMetaData;
