@@ -1,5 +1,7 @@
 package com.leanthoughts.sky.resources.order;
 
+import com.leanthoughts.sky.resources.flight.FlightResource;
+
 import java.time.LocalDateTime;
 
 public class CateringOrderResource extends BaseOrderResource {
@@ -13,6 +15,8 @@ public class CateringOrderResource extends BaseOrderResource {
     private Integer premiumBookingCount;
     private LocalDateTime confirmationDateTime;
     private CateringOrderStatus orderStatus;
+    private FlightResource flight;
+    private PrebookingResource preBooking;
 
     public CateringOrderResource() {
     }
@@ -51,6 +55,22 @@ public class CateringOrderResource extends BaseOrderResource {
 
     public CateringOrderStatus getOrderStatus() {
         return this.orderStatus;
+    }
+
+    public FlightResource getFlight() {
+        return flight;
+    }
+
+    public PrebookingResource getPreBooking() {
+        return preBooking;
+    }
+
+    public void setPreBooking(PrebookingResource preBooking) {
+        this.preBooking = preBooking;
+    }
+
+    public void setFlight(FlightResource flight) {
+        this.flight = flight;
     }
 
     public void setFlightSector(FlightSectorResource flightSector) {
