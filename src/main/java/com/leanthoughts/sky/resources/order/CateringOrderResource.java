@@ -7,6 +7,7 @@ import java.time.LocalDateTime;
 public class CateringOrderResource extends BaseOrderResource {
     private static final String type = "Catering order";
     private FlightSectorResource flightSector;
+    private String flightUid;
     private String cateringExecutive;
     private String upliftStation;
     private String unloadStation;
@@ -103,6 +104,14 @@ public class CateringOrderResource extends BaseOrderResource {
 
     public void setConfirmationDateTime(LocalDateTime confirmationDateTime) {
         this.confirmationDateTime = confirmationDateTime;
+    }
+
+    public String getFlightUid() {
+        return flightUid;
+    }
+
+    public void setFlightUid(String flightUid) {
+        this.flightUid = flightUid;
     }
 
     public void setOrderStatus(CateringOrderStatus orderStatus) {
