@@ -1,15 +1,20 @@
 package com.leanthoughts.sky.resources.order;
 
 import com.leanthoughts.sky.resources.BaseResource;
+import com.leanthoughts.sky.resources.product.ProductResource;
 import org.javamoney.moneta.Money;
 
-public class BaseLineItemResource extends BaseResource {
+import java.util.HashMap;
+import java.util.Map;
+
+public class BaseLineItemResource extends BaseResource implements Comparable<BaseLineItemResource>{
     private Integer sequenceNumber;
     private String productReference;
     private Money unitPrice;
     private int quantity;
     private String comment;
     private String orderReference;
+    private Map<String, ProductResource> productMetaData = new HashMap<String, ProductResource>();
 
     public BaseLineItemResource() {
     }
@@ -62,6 +67,14 @@ public class BaseLineItemResource extends BaseResource {
         this.orderReference = orderReference;
     }
 
+    public Map<String, ProductResource> getProductMetaData() {
+        return productMetaData;
+    }
+
+    public void setProductMetaData(Map<String, ProductResource> productMetaData) {
+        this.productMetaData = productMetaData;
+    }
+
     public boolean equals(Object o) {
         if (o == this) return true;
         if (!(o instanceof BaseLineItemResource)) return false;
@@ -108,5 +121,10 @@ public class BaseLineItemResource extends BaseResource {
 
     protected boolean canEqual(Object other) {
         return other instanceof BaseLineItemResource;
+    }
+
+    @Override
+    public int compareTo(BaseLineItemResource o) {
+        return this.getProductReference().compareTo(o.getProductReference());
     }
 }
