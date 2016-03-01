@@ -1,6 +1,7 @@
 package com.leanthoughts.sky.resources.planning;
 
 import com.leanthoughts.sky.resources.BaseResource;
+import com.leanthoughts.sky.resources.dictionary.CountType;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -11,6 +12,7 @@ import java.util.Map;
 public class MealPlanProductProjectionResource extends BaseResource {
     private String product;
     private Map<String, Double> quantity = new HashMap<String, Double>(0);
+    private Map<String, CountType> countType = new HashMap<String, CountType>(0);
 
     public MealPlanProductProjectionResource() {
     }
@@ -29,6 +31,14 @@ public class MealPlanProductProjectionResource extends BaseResource {
 
     public void setQuantity(Map<String, Double> quantity) {
         this.quantity = quantity;
+    }
+
+    public Map<String, CountType> getCountType() {
+        return countType;
+    }
+
+    public void setCountType(Map<String, CountType> countType) {
+        this.countType = countType;
     }
 
     public boolean equals(Object o) {

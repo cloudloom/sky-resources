@@ -16,8 +16,8 @@ public class CountTypeConverter implements AttributeConverter<CountType, String>
         switch (countType) {
             case PERCENTAGE:
                 return "PERCENTAGE";
-            case NUMBERS:
-                return "NUMBERS";
+            case NUMBER:
+                return "NUMBER";
             default:
                 throw new IllegalArgumentException("Unknown value: " + countType);
         }
@@ -28,8 +28,8 @@ public class CountTypeConverter implements AttributeConverter<CountType, String>
         switch (s) {
             case "PERCENTAGE":
                 return CountType.PERCENTAGE;
-            case "NUMBERS":
-                return CountType.NUMBERS;
+            case "NUMBER":
+                return CountType.NUMBER;
             default:
                 throw new IllegalArgumentException("Unknown value: " + s);
         }

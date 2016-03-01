@@ -10,6 +10,7 @@ import java.util.Map;
 public class BaseLineItemResource extends BaseResource implements Comparable<BaseLineItemResource>{
     private Integer sequenceNumber;
     private String productReference;
+    private String categoryReference;
     private Money unitPrice;
     private int quantity;
     private String comment;
@@ -73,6 +74,14 @@ public class BaseLineItemResource extends BaseResource implements Comparable<Bas
 
     public void setProductMetaData(Map<String, ProductResource> productMetaData) {
         this.productMetaData = productMetaData;
+    }
+
+    public String getCategoryReference() {
+        return categoryReference;
+    }
+
+    public void setCategoryReference(String categoryReference) {
+        this.categoryReference = categoryReference;
     }
 
     public boolean equals(Object o) {

@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 @JsonFormat(shape = JsonFormat.Shape.OBJECT)
 public enum CountType {
     PERCENTAGE("Percentage", "PERCENTAGE"),
-    NUMBERS("Numbers", "NUMBERS");
+    NUMBER("Number", "NUMBER");
 
     private final String countType;
     private final String abbreviation;
@@ -25,5 +25,14 @@ public enum CountType {
 
     public String getAbbreviation() {
         return abbreviation;
+    }
+
+    public static CountType fromValue(final String jsonNode) {
+        for (CountType type : CountType.values()) {
+            if (type.abbreviation.equals(jsonNode)) {
+                return type;
+            }
+        }
+        return null;
     }
 }
