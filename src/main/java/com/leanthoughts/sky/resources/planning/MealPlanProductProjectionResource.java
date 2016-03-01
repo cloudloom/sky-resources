@@ -1,7 +1,11 @@
 package com.leanthoughts.sky.resources.planning;
 
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.leanthoughts.sky.resources.BaseResource;
 import com.leanthoughts.sky.resources.dictionary.CountType;
+import com.leanthoughts.sky.resources.serialization.deserializer.CountTypeDeserializer;
+import com.leanthoughts.sky.resources.serialization.serializer.CountTypeSerializer;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -9,6 +13,7 @@ import java.util.Map;
 /**
  * Created by sadath on 27-Jan-2016.
  */
+@JsonSerialize(using = CountTypeSerializer.class)
 public class MealPlanProductProjectionResource extends BaseResource {
     private String product;
     private Map<String, Double> quantity = new HashMap<String, Double>(0);
@@ -37,6 +42,7 @@ public class MealPlanProductProjectionResource extends BaseResource {
         return countType;
     }
 
+    @JsonDeserialize(using = CountTypeDeserializer.class)
     public void setCountType(Map<String, CountType> countType) {
         this.countType = countType;
     }
