@@ -29,7 +29,7 @@ public enum CountType {
 
     public static CountType fromValue(final String jsonNode) {
         for (CountType type : CountType.values()) {
-            if (type.abbreviation.equals(jsonNode)) {
+            if (type.countType.equals(jsonNode)) {
                 return type;
             }
         }

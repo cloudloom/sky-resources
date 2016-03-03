@@ -14,11 +14,13 @@ import java.io.IOException;
 public class MealPlanProductBOBResourceSerializer extends JsonSerializer<MealPlanProductBOBResource> {
     @Override
     public void serialize(MealPlanProductBOBResource value, JsonGenerator jgen, SerializerProvider serializerProvider) throws IOException, JsonProcessingException {
-        jgen.writeStartObject();
-        jgen.writeStringField("uid", value.getUid());
-        jgen.writeStringField("categoryUid", value.getCategoryUid());
-        jgen.writeNumberField("count", value.getCount());
-        jgen.writeStringField("countType", value.getCountType().getAbbreviation());
-        jgen.writeEndObject();
+        if(value.getCategoryUid() != null && value.getCount() != null && value.getCountType() != null) {
+            jgen.writeStartObject();
+            jgen.writeStringField("uid", value.getUid());
+            jgen.writeStringField("categoryUid", value.getCategoryUid());
+            jgen.writeNumberField("count", value.getCount() != null ? value.getCount().doubleValue() : 0.0);
+            jgen.writeStringField("countType", value.getCountType() != null ? value.getCountType().getAbbreviation() : null);
+            jgen.writeEndObject();
+        }
     }
 }
