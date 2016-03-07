@@ -22,7 +22,7 @@ public class MealCategoryResource extends BaseResource {
     private MealCategoryResource parent;
     @JsonManagedReference
     private Set<MealCategoryResource> children = new HashSet<MealCategoryResource>(0);
-    private Set<String> products = new HashSet<String>(0);
+    private Map<String, Boolean> products = new HashMap<String, Boolean>(0);
     private Map<String, ArticleResource> productsMetaData = new HashMap<String, ArticleResource>();
 
     public MealCategoryResource() {
@@ -50,10 +50,6 @@ public class MealCategoryResource extends BaseResource {
 
     public Set<MealCategoryResource> getChildren() {
         return this.children;
-    }
-
-    public Set<String> getProducts() {
-        return this.products;
     }
 
     public Map<String, ArticleResource> getProductsMetaData() {
@@ -84,12 +80,16 @@ public class MealCategoryResource extends BaseResource {
         this.children = children;
     }
 
-    public void setProducts(Set<String> products) {
-        this.products = products;
-    }
-
     public void setProductsMetaData(Map<String, ArticleResource> productsMetaData) {
         this.productsMetaData = productsMetaData;
+    }
+
+    public Map<String, Boolean> getProducts() {
+        return products;
+    }
+
+    public void setProducts(Map<String, Boolean> products) {
+        this.products = products;
     }
 
     public boolean equals(Object o) {

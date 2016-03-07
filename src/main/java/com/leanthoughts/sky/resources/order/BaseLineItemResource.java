@@ -11,6 +11,7 @@ public class BaseLineItemResource extends BaseResource implements Comparable<Bas
     private Integer sequenceNumber;
     private String productReference;
     private String categoryReference;
+    private String groupReference;
     private Money unitPrice;
     private int quantity;
     private String comment;
@@ -82,6 +83,14 @@ public class BaseLineItemResource extends BaseResource implements Comparable<Bas
 
     public void setCategoryReference(String categoryReference) {
         this.categoryReference = categoryReference;
+    }
+
+    public String getGroupReference() {
+        return groupReference;
+    }
+
+    public void setGroupReference(String groupReference) {
+        this.groupReference = groupReference;
     }
 
     public boolean equals(Object o) {
