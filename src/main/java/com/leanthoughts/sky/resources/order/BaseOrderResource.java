@@ -16,7 +16,7 @@ public abstract class BaseOrderResource extends BaseResource{
     private Set<String> referenceOrders = new HashSet<>(0);
     private Set<PartnerFunction> partnerFunctions = new HashSet<>(0);
     private OrganizationResource organization;
-    private SortedSet<BaseLineItemResource> lineItems = new TreeSet<BaseLineItemResource>();
+    private Set<BaseLineItemResource> lineItems = new HashSet<BaseLineItemResource>();
 
     public BaseOrderResource() {
     }
@@ -61,10 +61,6 @@ public abstract class BaseOrderResource extends BaseResource{
         return this.organization;
     }
 
-    public SortedSet<BaseLineItemResource> getLineItems() {
-        return this.lineItems;
-    }
-
     public void setOrderId(String orderId) {
         this.orderId = orderId;
     }
@@ -105,7 +101,11 @@ public abstract class BaseOrderResource extends BaseResource{
         this.organization = organization;
     }
 
-    public void setLineItems(SortedSet<BaseLineItemResource> lineItems) {
+    public Set<BaseLineItemResource> getLineItems() {
+        return lineItems;
+    }
+
+    public void setLineItems(Set<BaseLineItemResource> lineItems) {
         this.lineItems = lineItems;
     }
 
