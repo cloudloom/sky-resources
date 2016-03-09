@@ -26,6 +26,14 @@ public class CateringOrderResource extends BaseOrderResource {
         return type;
     }
 
+    @Override
+    public String getOrderType(){
+        if(super.getOrderType() == null || super.getOrderType().isEmpty())
+            return "CateringOrder";
+        else
+            return super.getOrderType();
+    }
+
     public FlightSectorResource getFlightSector() {
         return this.flightSector;
     }
