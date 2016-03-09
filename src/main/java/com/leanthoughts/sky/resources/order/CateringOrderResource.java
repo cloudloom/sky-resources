@@ -22,6 +22,10 @@ public class CateringOrderResource extends BaseOrderResource {
     public CateringOrderResource() {
     }
 
+    public static String getType() {
+        return type;
+    }
+
     public FlightSectorResource getFlightSector() {
         return this.flightSector;
     }
