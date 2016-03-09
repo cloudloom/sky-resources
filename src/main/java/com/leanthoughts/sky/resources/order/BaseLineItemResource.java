@@ -8,6 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class BaseLineItemResource extends BaseResource {
+    private String id;
     private Integer sequenceNumber;
     private String productReference;
     private String categoryReference;
@@ -19,6 +20,14 @@ public class BaseLineItemResource extends BaseResource {
     private Map<String, ProductResource> productMetaData = new HashMap<String, ProductResource>();
 
     public BaseLineItemResource() {
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public Integer getSequenceNumber() {

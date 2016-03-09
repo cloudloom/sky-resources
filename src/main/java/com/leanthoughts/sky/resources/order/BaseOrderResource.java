@@ -6,6 +6,7 @@ import java.time.LocalDateTime;
 import java.util.*;
 
 public abstract class BaseOrderResource extends BaseResource{
+    private String id;
     private String orderId;
     private LocalDateTime created;
     private String createdBy;
@@ -19,6 +20,14 @@ public abstract class BaseOrderResource extends BaseResource{
     private Set<BaseLineItemResource> lineItems = new HashSet<BaseLineItemResource>();
 
     public BaseOrderResource() {
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getOrderId() {
