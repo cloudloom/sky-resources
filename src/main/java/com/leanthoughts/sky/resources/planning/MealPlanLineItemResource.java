@@ -14,6 +14,7 @@ import java.util.Set;
 public class MealPlanLineItemResource extends BaseResource {
     private PlanningCriteriaGroupResource planningCriteriaGroup;
     private Set<MealPlanProductResource> products = new HashSet<MealPlanProductResource>();
+    private Map<String, String> defaultProducts = new HashMap<String, String>();
     private Map<String, ProductResource> productMetaData = new HashMap<String, ProductResource>();
 
     public MealPlanLineItemResource() {
@@ -41,6 +42,14 @@ public class MealPlanLineItemResource extends BaseResource {
 
     public void setProductMetaData(Map<String, ProductResource> productMetaData) {
         this.productMetaData = productMetaData;
+    }
+
+    public Map<String, String> getDefaultProducts() {
+        return defaultProducts;
+    }
+
+    public void setDefaultProducts(Map<String, String> defaultProducts) {
+        this.defaultProducts = defaultProducts;
     }
 
     public boolean equals(Object o) {
