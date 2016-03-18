@@ -11,6 +11,7 @@ import java.util.Set;
 public class ArticleResource extends ProductResource {
     private String sku;
     private String ean;
+    private String code;
     private String longDescription;
     private PriceResource price;
     private String image;
@@ -27,6 +28,10 @@ public class ArticleResource extends ProductResource {
 
     public String getEan() {
         return this.ean;
+    }
+
+    public String getCode() {
+        return this.code;
     }
 
     public String getLongDescription() {
@@ -61,6 +66,10 @@ public class ArticleResource extends ProductResource {
         this.ean = ean;
     }
 
+    public void setCode(String code) {
+        this.code = code;
+    }
+
     public void setLongDescription(String longDescription) {
         this.longDescription = longDescription;
     }
@@ -90,19 +99,13 @@ public class ArticleResource extends ProductResource {
         if (!(o instanceof ArticleResource)) return false;
         final ArticleResource other = (ArticleResource) o;
         if (!other.canEqual((Object) this)) return false;
-        final Object this$sku = this.getSku();
-        final Object other$sku = other.getSku();
-        if (this$sku == null ? other$sku != null : !this$sku.equals(other$sku)) return false;
-        final Object this$ean = this.getEan();
-        final Object other$ean = other.getEan();
-        if (this$ean == null ? other$ean != null : !this$ean.equals(other$ean)) return false;
+        final Object this$code = this.getCode();
+        final Object other$code = other.getCode();
+        if (this$code == null ? other$code != null : !this$code.equals(other$code)) return false;
         final Object this$longDescription = this.getLongDescription();
         final Object other$longDescription = other.getLongDescription();
         if (this$longDescription == null ? other$longDescription != null : !this$longDescription.equals(other$longDescription))
             return false;
-        final Object this$price = this.getPrice();
-        final Object other$price = other.getPrice();
-        if (this$price == null ? other$price != null : !this$price.equals(other$price)) return false;
         final Object this$image = this.getImage();
         final Object other$image = other.getImage();
         if (this$image == null ? other$image != null : !this$image.equals(other$image)) return false;
@@ -115,14 +118,10 @@ public class ArticleResource extends ProductResource {
     public int hashCode() {
         final int PRIME = 59;
         int result = 1;
-        final Object $sku = this.getSku();
-        result = result * PRIME + ($sku == null ? 0 : $sku.hashCode());
-        final Object $ean = this.getEan();
-        result = result * PRIME + ($ean == null ? 0 : $ean.hashCode());
+        final Object $code = this.getCode();
+        result = result * PRIME + ($code == null ? 0 : $code.hashCode());
         final Object $longDescription = this.getLongDescription();
         result = result * PRIME + ($longDescription == null ? 0 : $longDescription.hashCode());
-        final Object $price = this.getPrice();
-        result = result * PRIME + ($price == null ? 0 : $price.hashCode());
         final Object $image = this.getImage();
         result = result * PRIME + ($image == null ? 0 : $image.hashCode());
         final Object $id = this.getId();
