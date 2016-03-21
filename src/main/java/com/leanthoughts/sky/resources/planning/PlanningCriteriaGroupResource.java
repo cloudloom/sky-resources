@@ -5,6 +5,7 @@ package com.leanthoughts.sky.resources.planning;
  */
 
 import com.leanthoughts.sky.resources.BaseResource;
+import com.leanthoughts.sky.resources.dictionary.PlanningGroupType;
 import com.leanthoughts.sky.resources.product.ArticleResource;
 
 import java.util.HashMap;
@@ -21,6 +22,7 @@ import java.util.Set;
  */
 public class PlanningCriteriaGroupResource extends BaseResource {
     private String name;
+    private PlanningGroupType planningGroupType;
     private Set<String> products = new HashSet<String>();
     private Map<String, ArticleResource> productsMetaData = new HashMap<String, ArticleResource>();
     private Set<MealCategoryResource> mealCategories = new HashSet<MealCategoryResource>(0);
@@ -34,6 +36,14 @@ public class PlanningCriteriaGroupResource extends BaseResource {
 
     public Set<String> getProducts() {
         return this.products;
+    }
+
+    public PlanningGroupType getPlanningGroupType() {
+        return planningGroupType;
+    }
+
+    public void setPlanningGroupType(PlanningGroupType planningGroupType) {
+        this.planningGroupType = planningGroupType;
     }
 
     public Map<String, ArticleResource> getProductsMetaData() {
