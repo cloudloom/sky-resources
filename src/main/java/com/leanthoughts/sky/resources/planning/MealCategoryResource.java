@@ -9,6 +9,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
+import java.util.stream.Stream;
 
 /**
  * Created by sadath on 04-Jan-2016.
@@ -24,6 +25,12 @@ public class MealCategoryResource extends BaseResource {
     private Set<MealCategoryResource> children = new HashSet<MealCategoryResource>(0);
     private Map<String, Boolean> products = new HashMap<String, Boolean>(0);
     private Map<String, ArticleResource> productsMetaData = new HashMap<String, ArticleResource>();
+
+    public Stream<MealCategoryResource> flattened() {
+        return Stream.concat(
+                Stream.of(this),
+                children.stream().flatMap(MealCategoryResource::flattened));
+    }
 
     public MealCategoryResource() {
     }
