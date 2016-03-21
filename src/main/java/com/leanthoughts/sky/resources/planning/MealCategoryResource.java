@@ -27,8 +27,7 @@ public class MealCategoryResource extends BaseResource {
     private Map<String, ArticleResource> productsMetaData = new HashMap<String, ArticleResource>();
 
     public Stream<MealCategoryResource> flattened() {
-        return Stream.concat(
-                Stream.of(this),
+        return Stream.concat(Stream.of(this),
                 children.stream().flatMap(MealCategoryResource::flattened));
     }
 
