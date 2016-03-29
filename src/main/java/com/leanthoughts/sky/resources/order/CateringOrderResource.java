@@ -4,7 +4,7 @@ import com.leanthoughts.sky.resources.flight.FlightResource;
 
 import java.time.LocalDateTime;
 
-public class CateringOrderResource extends CateringBaseOrderResource {
+public class CateringOrderResource extends BaseOrderResource {
     private static final String type = "Catering order";
     private FlightSectorResource flightSector;
     private String flightUid;
