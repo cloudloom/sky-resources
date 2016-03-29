@@ -2,6 +2,7 @@ package com.leanthoughts.sky.resources.flight;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
+import java.awt.print.Pageable;
 import java.util.Date;
 
 /**
@@ -20,6 +21,7 @@ public class FlightSearchResource {
     private Date sta;
     @JsonFormat(pattern = "HH:mm")
     private Date std;
+    private Pageable pageable;
 
     public String getConnId() {
         return connId;
@@ -75,5 +77,13 @@ public class FlightSearchResource {
 
     public void setStd(Date std) {
         this.std = std;
+    }
+
+    public Pageable getPageable() {
+        return pageable;
+    }
+
+    public void setPageable(Pageable pageable) {
+        this.pageable = pageable;
     }
 }
