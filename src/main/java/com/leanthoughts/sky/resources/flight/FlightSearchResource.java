@@ -1,8 +1,8 @@
 package com.leanthoughts.sky.resources.flight;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import org.springframework.data.domain.Pageable;
 
-import java.awt.print.Pageable;
 import java.util.Date;
 
 /**
