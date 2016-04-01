@@ -1,10 +1,9 @@
 package com.leanthoughts.sky.resources.flight;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.leanthoughts.sky.resources.pagination.PageableResource;
 
 import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * Created by fahad on 01-02-2016.
@@ -22,9 +21,7 @@ public class FlightSearchResource {
     private Date sta;
     @JsonFormat(pattern = "HH:mm")
     private Date std;
-    private int size;
-    private int page;
-    private Map<String, String> sort = new HashMap<String, String>();
+    private PageableResource pageableResource;
 
     public String getConnId() {
         return connId;
@@ -82,27 +79,11 @@ public class FlightSearchResource {
         this.std = std;
     }
 
-    public int getSize() {
-        return size;
+    public PageableResource getPageableResource() {
+        return pageableResource;
     }
 
-    public void setSize(int size) {
-        this.size = size;
-    }
-
-    public int getPage() {
-        return page;
-    }
-
-    public void setPage(int page) {
-        this.page = page;
-    }
-
-    public Map<String, String> getSort() {
-        return sort;
-    }
-
-    public void setSort(Map<String, String> sort) {
-        this.sort = sort;
+    public void setPageableResource(PageableResource pageableResource) {
+        this.pageableResource = pageableResource;
     }
 }
