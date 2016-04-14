@@ -3,7 +3,6 @@ package com.leanthoughts.sky.resources.dictionary.jpa.impl;
 import com.leanthoughts.sky.resources.dictionary.Timezone;
 import com.leanthoughts.sky.resources.dictionary.TimezoneType;
 import com.leanthoughts.sky.resources.dictionary.converter.TimezoneTypeConverter;
-import com.tracebucket.tron.domain.BaseValueObject;
 
 import javax.persistence.*;
 

@@ -3,7 +3,6 @@ package com.leanthoughts.sky.resources.dictionary.jpa.impl;
 import com.leanthoughts.sky.resources.dictionary.Phone;
 import com.leanthoughts.sky.resources.dictionary.PhoneType;
 import com.leanthoughts.sky.resources.dictionary.converter.PhoneTypeConverter;
-import com.tracebucket.tron.domain.BaseValueObject;
 
 import javax.persistence.*;
 

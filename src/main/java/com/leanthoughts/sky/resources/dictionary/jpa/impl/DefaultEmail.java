@@ -3,7 +3,6 @@ package com.leanthoughts.sky.resources.dictionary.jpa.impl;
 import com.leanthoughts.sky.resources.dictionary.Email;
 import com.leanthoughts.sky.resources.dictionary.EmailType;
 import com.leanthoughts.sky.resources.dictionary.converter.EmailTypeConverter;
-import com.tracebucket.tron.domain.BaseValueObject;
 
 import javax.persistence.*;
 

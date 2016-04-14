@@ -3,7 +3,6 @@ package com.leanthoughts.sky.resources.dictionary.jpa.impl;
 import com.leanthoughts.sky.resources.dictionary.Currency;
 import com.leanthoughts.sky.resources.dictionary.CurrencyType;
 import com.leanthoughts.sky.resources.dictionary.converter.CurrencyTypeConverter;
-import com.tracebucket.tron.domain.BaseValueObject;
 
 import javax.persistence.*;
 

@@ -3,7 +3,6 @@ package com.leanthoughts.sky.resources.dictionary.jpa.impl;
 import com.leanthoughts.sky.resources.dictionary.*;
 import com.leanthoughts.sky.resources.dictionary.converter.GenderTypeConverter;
 import com.leanthoughts.sky.resources.dictionary.converter.PersonTypeConverter;
-import com.tracebucket.tron.domain.BaseEntity;
 
 import javax.persistence.*;
 import java.util.*;

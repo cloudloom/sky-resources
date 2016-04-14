@@ -3,7 +3,6 @@ package com.leanthoughts.sky.resources.dictionary.jpa.impl;
 import com.leanthoughts.sky.resources.dictionary.Address;
 import com.leanthoughts.sky.resources.dictionary.AddressType;
 import com.leanthoughts.sky.resources.dictionary.converter.AddressTypeConverter;
-import com.tracebucket.tron.domain.BaseValueObject;
 
 import javax.persistence.*;
 
