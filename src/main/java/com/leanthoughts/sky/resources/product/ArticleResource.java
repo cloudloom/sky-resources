@@ -14,7 +14,7 @@ public class ArticleResource extends ProductResource {
     private String ean;
     private String code;
     private String longDescription;
-    private PriceResource price;
+    private Set<PriceResource> prices = new HashSet<PriceResource>(0);
     private String image;
     private String id;
     private Set<CategoryResource> categories = new HashSet<CategoryResource>(0);
@@ -43,10 +43,6 @@ public class ArticleResource extends ProductResource {
 
     public String getLongDescription() {
         return this.longDescription;
-    }
-
-    public PriceResource getPrice() {
-        return this.price;
     }
 
     public String getImage() {
@@ -79,10 +75,6 @@ public class ArticleResource extends ProductResource {
 
     public void setLongDescription(String longDescription) {
         this.longDescription = longDescription;
-    }
-
-    public void setPrice(PriceResource price) {
-        this.price = price;
     }
 
     public void setImage(String image) {
@@ -131,6 +123,14 @@ public class ArticleResource extends ProductResource {
 
     public void setTotalQuantity(double totalQuantity) {
         this.totalQuantity = totalQuantity;
+    }
+
+    public Set<PriceResource> getPrices() {
+        return prices;
+    }
+
+    public void setPrices(Set<PriceResource> prices) {
+        this.prices = prices;
     }
 
     public boolean equals(Object o) {
