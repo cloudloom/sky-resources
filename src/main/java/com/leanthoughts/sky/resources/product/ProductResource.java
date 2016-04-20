@@ -11,4 +11,5 @@ public abstract class ProductResource extends BaseResource {
     private String name;
     private String description;
     private SellerResource seller;
+
 }
