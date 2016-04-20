@@ -37,6 +37,7 @@ public class FlightResource extends BaseResource {
     private ScheduleResource schedule;
     private Boolean BOBStatus;
     private Set<Station> station;
+    private String tailNo;
 
     public FlightResource() {
     }
@@ -222,6 +223,14 @@ public class FlightResource extends BaseResource {
 
     public void setSchedule(ScheduleResource schedule) {
         this.schedule = schedule;
+    }
+
+    public String getTailNo() {
+        return tailNo;
+    }
+
+    public void setTailNo(String tailNo) {
+        this.tailNo = tailNo;
     }
 
     @Override

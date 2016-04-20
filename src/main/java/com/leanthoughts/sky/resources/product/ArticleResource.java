@@ -1,5 +1,6 @@
 package com.leanthoughts.sky.resources.product;
 
+import com.leanthoughts.sky.resources.dictionary.CountType;
 import com.leanthoughts.sky.resources.planning.MealCategoryResource;
 
 import java.util.HashSet;
@@ -18,6 +19,12 @@ public class ArticleResource extends ProductResource {
     private String id;
     private Set<CategoryResource> categories = new HashSet<CategoryResource>(0);
     private Set<MealCategoryResource> mealCategories = new HashSet<MealCategoryResource>(0);
+
+    /** Customized Properties For App**/
+    private double bobQuantity;
+    private CountType bobQuantityType;
+    private double preBookingQuantity;
+    private double totalQuantity;
 
     public ArticleResource() {
     }
@@ -92,6 +99,38 @@ public class ArticleResource extends ProductResource {
 
     public void setMealCategories(Set<MealCategoryResource> mealCategories) {
         this.mealCategories = mealCategories;
+    }
+
+    public double getBobQuantity() {
+        return bobQuantity;
+    }
+
+    public void setBobQuantity(double bobQuantity) {
+        this.bobQuantity = bobQuantity;
+    }
+
+    public CountType getBobQuantityType() {
+        return bobQuantityType;
+    }
+
+    public void setBobQuantityType(CountType bobQuantityType) {
+        this.bobQuantityType = bobQuantityType;
+    }
+
+    public double getPreBookingQuantity() {
+        return preBookingQuantity;
+    }
+
+    public void setPreBookingQuantity(double preBookingQuantity) {
+        this.preBookingQuantity = preBookingQuantity;
+    }
+
+    public double getTotalQuantity() {
+        return totalQuantity;
+    }
+
+    public void setTotalQuantity(double totalQuantity) {
+        this.totalQuantity = totalQuantity;
     }
 
     public boolean equals(Object o) {

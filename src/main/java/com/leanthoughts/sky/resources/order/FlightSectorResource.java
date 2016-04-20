@@ -12,6 +12,7 @@ public class FlightSectorResource extends BaseResource {
     private String arrivalStation;
     private LocalDateTime departureTime;
     private LocalDateTime arrivalTime;
+    private String tailNo;
 
     public FlightSectorResource() {
     }
@@ -40,6 +41,10 @@ public class FlightSectorResource extends BaseResource {
         return this.arrivalTime;
     }
 
+    public String getTailNo() {
+        return this.tailNo;
+    }
+
     public void setFlightNumber(String flightNumber) {
         this.flightNumber = flightNumber;
     }
@@ -62,6 +67,10 @@ public class FlightSectorResource extends BaseResource {
 
     public void setArrivalTime(LocalDateTime arrivalTime) {
         this.arrivalTime = arrivalTime;
+    }
+
+    public void setTailNo(String tailNo) {
+        this.tailNo = tailNo;
     }
 
     public boolean equals(Object o) {
@@ -93,6 +102,9 @@ public class FlightSectorResource extends BaseResource {
         final Object other$arrivalTime = other.arrivalTime;
         if (this$arrivalTime == null ? other$arrivalTime != null : !this$arrivalTime.equals(other$arrivalTime))
             return false;
+        final Object this$tailNo = this.tailNo;
+        final Object other$tailNo = other.tailNo;
+        if (this$tailNo == null ? other$tailNo != null : !this$tailNo.equals(other$tailNo)) return false;
         return true;
     }
 
@@ -111,6 +123,8 @@ public class FlightSectorResource extends BaseResource {
         result = result * PRIME + ($departureTime == null ? 0 : $departureTime.hashCode());
         final Object $arrivalTime = this.arrivalTime;
         result = result * PRIME + ($arrivalTime == null ? 0 : $arrivalTime.hashCode());
+        final Object $tailNo = this.tailNo;
+        result = result * PRIME + ($tailNo == null ? 0 : $tailNo.hashCode());
         return result;
     }
 

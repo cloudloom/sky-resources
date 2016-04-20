@@ -1,8 +1,12 @@
 package com.leanthoughts.sky.resources.order;
 
 import com.leanthoughts.sky.resources.flight.FlightResource;
+import com.leanthoughts.sky.resources.planning.StationResource;
+import com.leanthoughts.sky.resources.product.ArticleResource;
 
 import java.time.LocalDateTime;
+import java.util.HashSet;
+import java.util.Set;
 
 public class CateringOrderResource extends BaseOrderResource {
     private static final String type = "Catering order";
@@ -18,6 +22,12 @@ public class CateringOrderResource extends BaseOrderResource {
     private CateringOrderStatus orderStatus;
     private FlightResource flight;
     private PrebookingResource preBooking;
+
+    /** Customized Properties For App**/
+    private String tailNo;
+    private StationResource upliftStationResource;
+    private StationResource unloadStationResource;
+    final private Set<ArticleResource> products = new HashSet<ArticleResource>();
 
     public CateringOrderResource() {
     }
@@ -128,6 +138,34 @@ public class CateringOrderResource extends BaseOrderResource {
 
     public void setOrderStatus(CateringOrderStatus orderStatus) {
         this.orderStatus = orderStatus;
+    }
+
+    public String getTailNo() {
+        return tailNo;
+    }
+
+    public void setTailNo(String tailNo) {
+        this.tailNo = tailNo;
+    }
+
+    public StationResource getUpliftStationResource() {
+        return upliftStationResource;
+    }
+
+    public void setUpliftStationResource(StationResource upliftStationResource) {
+        this.upliftStationResource = upliftStationResource;
+    }
+
+    public StationResource getUnloadStationResource() {
+        return unloadStationResource;
+    }
+
+    public void setUnloadStationResource(StationResource unloadStationResource) {
+        this.unloadStationResource = unloadStationResource;
+    }
+
+    public Set<ArticleResource> getProducts() {
+        return products;
     }
 
     public boolean equals(Object o) {

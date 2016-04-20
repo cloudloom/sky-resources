@@ -6,7 +6,7 @@ import java.util.Set;
 
 public class PrebookingResource extends BaseResource {
     private FlightSectorResource flightSector;
-    private Set<PrebookingCategoryResource> category;
+    private Set<PrebookingCountResource> prebookings;
     private int totalCount;
     private int totalPax;
 
@@ -17,8 +17,8 @@ public class PrebookingResource extends BaseResource {
         return this.flightSector;
     }
 
-    public Set<PrebookingCategoryResource> getCategory() {
-        return this.category;
+    public Set<PrebookingCountResource> getPrebookings() {
+        return this.prebookings;
     }
 
     public int getTotalCount() {
@@ -33,8 +33,8 @@ public class PrebookingResource extends BaseResource {
         this.flightSector = flightSector;
     }
 
-    public void setCategory(Set<PrebookingCategoryResource> category) {
-        this.category = category;
+    public void setPrebookings(Set<PrebookingCountResource> prebookings) {
+        this.prebookings = prebookings;
     }
 
     public void setTotalCount(int totalCount) {
@@ -54,9 +54,10 @@ public class PrebookingResource extends BaseResource {
         final Object other$flightSector = other.flightSector;
         if (this$flightSector == null ? other$flightSector != null : !this$flightSector.equals(other$flightSector))
             return false;
-        final Object this$category = this.category;
-        final Object other$category = other.category;
-        if (this$category == null ? other$category != null : !this$category.equals(other$category)) return false;
+        final Object this$prebookings = this.prebookings;
+        final Object other$prebookings = other.prebookings;
+        if (this$prebookings == null ? other$prebookings != null : !this$prebookings.equals(other$prebookings))
+            return false;
         if (this.totalCount != other.totalCount) return false;
         if (this.totalPax != other.totalPax) return false;
         return true;
@@ -67,8 +68,8 @@ public class PrebookingResource extends BaseResource {
         int result = 1;
         final Object $flightSector = this.flightSector;
         result = result * PRIME + ($flightSector == null ? 0 : $flightSector.hashCode());
-        final Object $category = this.category;
-        result = result * PRIME + ($category == null ? 0 : $category.hashCode());
+        final Object $prebookings = this.prebookings;
+        result = result * PRIME + ($prebookings == null ? 0 : $prebookings.hashCode());
         result = result * PRIME + this.totalCount;
         result = result * PRIME + this.totalPax;
         return result;
@@ -77,4 +78,5 @@ public class PrebookingResource extends BaseResource {
     protected boolean canEqual(Object other) {
         return other instanceof PrebookingResource;
     }
+
 }

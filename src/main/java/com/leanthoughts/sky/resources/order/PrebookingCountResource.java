@@ -2,12 +2,12 @@ package com.leanthoughts.sky.resources.order;
 
 import com.leanthoughts.sky.resources.BaseResource;
 
-public class PrebookingCategoryResource extends BaseResource{
+public class PrebookingCountResource extends BaseResource{
     private String code;
     private String description;
     private int quantity;
 
-    public PrebookingCategoryResource() {
+    public PrebookingCountResource() {
     }
 
     public String getCode() {
@@ -36,8 +36,8 @@ public class PrebookingCategoryResource extends BaseResource{
 
     public boolean equals(Object o) {
         if (o == this) return true;
-        if (!(o instanceof PrebookingCategoryResource)) return false;
-        final PrebookingCategoryResource other = (PrebookingCategoryResource) o;
+        if (!(o instanceof PrebookingCountResource)) return false;
+        final PrebookingCountResource other = (PrebookingCountResource) o;
         if (!other.canEqual((Object) this)) return false;
         final Object this$code = this.code;
         final Object other$code = other.code;
@@ -62,6 +62,6 @@ public class PrebookingCategoryResource extends BaseResource{
     }
 
     protected boolean canEqual(Object other) {
-        return other instanceof PrebookingCategoryResource;
+        return other instanceof PrebookingCountResource;
     }
 }
