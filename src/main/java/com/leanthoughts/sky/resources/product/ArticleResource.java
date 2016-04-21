@@ -2,6 +2,7 @@ package com.leanthoughts.sky.resources.product;
 
 import com.leanthoughts.sky.resources.dictionary.CountType;
 import com.leanthoughts.sky.resources.planning.MealCategoryResource;
+import com.leanthoughts.sky.resources.planning.PlanningCriteriaGroupResource;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -19,6 +20,7 @@ public class ArticleResource extends ProductResource {
     private String id;
     private Set<CategoryResource> categories = new HashSet<CategoryResource>(0);
     private Set<MealCategoryResource> mealCategories = new HashSet<MealCategoryResource>(0);
+    private Set<PlanningCriteriaGroupResource> planningCriteriaGroups = new HashSet<PlanningCriteriaGroupResource>();
 
     /** Customized Properties For App**/
     private double bobQuantity;
@@ -131,6 +133,14 @@ public class ArticleResource extends ProductResource {
 
     public void setPrices(Set<PriceResource> prices) {
         this.prices = prices;
+    }
+
+    public Set<PlanningCriteriaGroupResource> getPlanningCriteriaGroups() {
+        return planningCriteriaGroups;
+    }
+
+    public void setPlanningCriteriaGroups(Set<PlanningCriteriaGroupResource> planningCriteriaGroups) {
+        this.planningCriteriaGroups = planningCriteriaGroups;
     }
 
     public boolean equals(Object o) {
