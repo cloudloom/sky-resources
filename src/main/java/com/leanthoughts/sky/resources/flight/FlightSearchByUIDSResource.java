@@ -13,6 +13,8 @@ import java.util.List;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class FlightSearchByUIDSResource {
     private List<String> flightUIDS;
+    private String upliftStation;
+    private String unloadStation;
     private PageableResource pageableResource;
 
     public List<String> getFlightUIDS() {
@@ -29,5 +31,21 @@ public class FlightSearchByUIDSResource {
 
     public void setPageableResource(PageableResource pageableResource) {
         this.pageableResource = pageableResource;
+    }
+
+    public String getUpliftStation() {
+        return upliftStation;
+    }
+
+    public void setUpliftStation(String upliftStation) {
+        this.upliftStation = upliftStation;
+    }
+
+    public String getUnloadStation() {
+        return unloadStation;
+    }
+
+    public void setUnloadStation(String unloadStation) {
+        this.unloadStation = unloadStation;
     }
 }

@@ -21,6 +21,9 @@ public class FlightSearchResource {
     private Date sta;
     @JsonFormat(pattern = "HH:mm")
     private Date std;
+    private String upliftStation;
+    private String unloadStation;
+
     private PageableResource pageableResource;
 
     public String getConnId() {
@@ -85,5 +88,21 @@ public class FlightSearchResource {
 
     public void setPageableResource(PageableResource pageableResource) {
         this.pageableResource = pageableResource;
+    }
+
+    public String getUpliftStation() {
+        return upliftStation;
+    }
+
+    public void setUpliftStation(String upliftStation) {
+        this.upliftStation = upliftStation;
+    }
+
+    public String getUnloadStation() {
+        return unloadStation;
+    }
+
+    public void setUnloadStation(String unloadStation) {
+        this.unloadStation = unloadStation;
     }
 }
