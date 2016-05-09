@@ -11,6 +11,12 @@ public class SearchCriteriaResource {
     private Object value;
 
     public SearchCriteriaResource(){}
+    public SearchCriteriaResource(String key,String operation,Object value){
+        this.key=key;
+        this.operation=operation;
+        this.value=value;
+    }
+
 
     public String getKey() {
         return key;
