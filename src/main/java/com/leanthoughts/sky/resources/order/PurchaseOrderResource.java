@@ -12,7 +12,9 @@ import java.util.Set;
  */
 public class PurchaseOrderResource extends BaseOrderResource {
 
-    private static final String type = "PurchaseOrder";
+    private
+
+    final String type = "PurchaseOrder";
     private String orderingPartyReference;
     private String recepientPartyReference;
     private String contactPersonReference;
@@ -22,5 +24,6 @@ public class PurchaseOrderResource extends BaseOrderResource {
     private PurchaseOrderStatusResource status;
 
     /** Customized Properties For App**/
+
 
 }
