@@ -1,8 +1,10 @@
 package com.leanthoughts.sky.resources.flight;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.leanthoughts.sky.resources.BaseResource;
 
 import java.util.Date;
+import java.util.Set;
 
 /**
  * Created by sadath on 01-Jan-2016.
@@ -15,12 +17,18 @@ public class ScheduleResource extends BaseResource {
     private AirportResource airportFrom;
     private String cityTo;
     private AirportResource airportTo;
+    @JsonFormat(pattern = "HH:mm:ss")
     private Date std;
+    @JsonFormat(pattern = "HH:mm:ss")
     private Date sta;
     private int distance;
     private String unitDistance;
     private String flightType;
     private String period;
+    private Boolean BOBStatus;
+    private Set<FlightResource.Station> station;
+
+
 
     public ScheduleResource() {
     }
@@ -127,6 +135,22 @@ public class ScheduleResource extends BaseResource {
 
     public void setPeriod(String period) {
         this.period = period;
+    }
+
+    public Boolean getBOBStatus() {
+        return BOBStatus;
+    }
+
+    public void setBOBStatus(Boolean BOBStatus) {
+        this.BOBStatus = BOBStatus;
+    }
+
+    public Set<FlightResource.Station> getStation() {
+        return station;
+    }
+
+    public void setStation(Set<FlightResource.Station> station) {
+        this.station = station;
     }
 
     public boolean equals(Object o) {
