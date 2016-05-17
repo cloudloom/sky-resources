@@ -1,8 +1,12 @@
 package com.leanthoughts.sky.resources.planning;
 
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.leanthoughts.sky.resources.BaseResource;
 import com.leanthoughts.sky.resources.dictionary.CountType;
 import com.leanthoughts.sky.resources.product.ArticleResource;
+import com.leanthoughts.sky.resources.serialization.deserializer.CountTypeDeserializer;
+import com.leanthoughts.sky.resources.serialization.serializer.MealPlanProjectionItemSerializer;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -10,11 +14,13 @@ import java.util.Map;
 /**
  * Created by sadath on 25-Jan-2016.
  */
+@JsonSerialize(using = MealPlanProjectionItemSerializer.class)
 public class MealPlanProjectionItemResource extends BaseResource {
     private PlanningCriteriaGroupResource planningCriteriaGroup;
     private String product;
     private String category;
     private Double count;
+    @JsonDeserialize(using = CountTypeDeserializer.class)
     private CountType countType;
     private Map<String, ArticleResource> productMetaData = new HashMap<String, ArticleResource>();
     private Map<String, MealCategoryResource> categoryMetaData = new HashMap<String, MealCategoryResource>();
