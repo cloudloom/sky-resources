@@ -2,11 +2,8 @@ package com.leanthoughts.sky.resources.planning;
 
 import com.leanthoughts.sky.resources.BaseResource;
 import com.leanthoughts.sky.resources.TenantResource;
-import com.leanthoughts.sky.resources.flight.FlightResource;
 
-import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Map;
 import java.util.Set;
 
 /**
@@ -15,10 +12,7 @@ import java.util.Set;
 public class MealPlanResource extends BaseResource {
     private TenantResource tenant;
     private String description;
-    private boolean addAllFlights;
-    private Set<String> flights = new HashSet<String>(0);
-    private Map<String, FlightResource> flightMetaData = new HashMap<String, FlightResource>(0);
-    private Set<MealPlanPlanningCriteriaResource> mealPlanPlanningCriterias = new HashSet<MealPlanPlanningCriteriaResource>(0);
+    private PlanningCriteriaAttributeResource planningCriteriaAttribute;
     private Set<MealPlanLineItemResource> mealPlanLineItems = new HashSet<MealPlanLineItemResource>(0);
 
     public MealPlanResource() {
@@ -32,24 +26,8 @@ public class MealPlanResource extends BaseResource {
         return this.description;
     }
 
-    public Set<String> getFlights() {
-        return this.flights;
-    }
-
-    public Map<String, FlightResource> getFlightMetaData() {
-        return this.flightMetaData;
-    }
-
-    public Set<MealPlanPlanningCriteriaResource> getMealPlanPlanningCriterias() {
-        return this.mealPlanPlanningCriterias;
-    }
-
-    public boolean isAddAllFlights() {
-        return addAllFlights;
-    }
-
-    public void setAddAllFlights(boolean addAllFlights) {
-        this.addAllFlights = addAllFlights;
+    public PlanningCriteriaAttributeResource getPlanningCriteriaAttribute() {
+        return this.planningCriteriaAttribute;
     }
 
     public Set<MealPlanLineItemResource> getMealPlanLineItems() {
@@ -64,16 +42,8 @@ public class MealPlanResource extends BaseResource {
         this.description = description;
     }
 
-    public void setFlights(Set<String> flights) {
-        this.flights = flights;
-    }
-
-    public void setFlightMetaData(Map<String, FlightResource> flightMetaData) {
-        this.flightMetaData = flightMetaData;
-    }
-
-    public void setMealPlanPlanningCriterias(Set<MealPlanPlanningCriteriaResource> mealPlanPlanningCriterias) {
-        this.mealPlanPlanningCriterias = mealPlanPlanningCriterias;
+    public void setPlanningCriteriaAttribute(PlanningCriteriaAttributeResource planningCriteriaAttribute) {
+        this.planningCriteriaAttribute = planningCriteriaAttribute;
     }
 
     public void setMealPlanLineItems(Set<MealPlanLineItemResource> mealPlanLineItems) {
@@ -85,22 +55,19 @@ public class MealPlanResource extends BaseResource {
         if (!(o instanceof MealPlanResource)) return false;
         final MealPlanResource other = (MealPlanResource) o;
         if (!other.canEqual((Object) this)) return false;
-        final Object this$tenant = this.getTenant();
-        final Object other$tenant = other.getTenant();
+        final Object this$tenant = this.tenant;
+        final Object other$tenant = other.tenant;
         if (this$tenant == null ? other$tenant != null : !this$tenant.equals(other$tenant)) return false;
-        final Object this$description = this.getDescription();
-        final Object other$description = other.getDescription();
+        final Object this$description = this.description;
+        final Object other$description = other.description;
         if (this$description == null ? other$description != null : !this$description.equals(other$description))
             return false;
-        final Object this$flights = this.getFlights();
-        final Object other$flights = other.getFlights();
-        if (this$flights == null ? other$flights != null : !this$flights.equals(other$flights)) return false;
-        final Object this$mealPlanPlanningCriterias = this.getMealPlanPlanningCriterias();
-        final Object other$mealPlanPlanningCriterias = other.getMealPlanPlanningCriterias();
-        if (this$mealPlanPlanningCriterias == null ? other$mealPlanPlanningCriterias != null : !this$mealPlanPlanningCriterias.equals(other$mealPlanPlanningCriterias))
+        final Object this$planningCriteriaAttribute = this.planningCriteriaAttribute;
+        final Object other$planningCriteriaAttribute = other.planningCriteriaAttribute;
+        if (this$planningCriteriaAttribute == null ? other$planningCriteriaAttribute != null : !this$planningCriteriaAttribute.equals(other$planningCriteriaAttribute))
             return false;
-        final Object this$mealPlanLineItems = this.getMealPlanLineItems();
-        final Object other$mealPlanLineItems = other.getMealPlanLineItems();
+        final Object this$mealPlanLineItems = this.mealPlanLineItems;
+        final Object other$mealPlanLineItems = other.mealPlanLineItems;
         if (this$mealPlanLineItems == null ? other$mealPlanLineItems != null : !this$mealPlanLineItems.equals(other$mealPlanLineItems))
             return false;
         return true;
@@ -109,18 +76,17 @@ public class MealPlanResource extends BaseResource {
     public int hashCode() {
         final int PRIME = 59;
         int result = 1;
-        final Object $tenant = this.getTenant();
+        final Object $tenant = this.tenant;
         result = result * PRIME + ($tenant == null ? 0 : $tenant.hashCode());
-        final Object $description = this.getDescription();
+        final Object $description = this.description;
         result = result * PRIME + ($description == null ? 0 : $description.hashCode());
-        final Object $flights = this.getFlights();
-        result = result * PRIME + ($flights == null ? 0 : $flights.hashCode());
-        final Object $mealPlanPlanningCriterias = this.getMealPlanPlanningCriterias();
-        result = result * PRIME + ($mealPlanPlanningCriterias == null ? 0 : $mealPlanPlanningCriterias.hashCode());
-        final Object $mealPlanLineItems = this.getMealPlanLineItems();
+        final Object $planningCriteriaAttribute = this.planningCriteriaAttribute;
+        result = result * PRIME + ($planningCriteriaAttribute == null ? 0 : $planningCriteriaAttribute.hashCode());
+        final Object $mealPlanLineItems = this.mealPlanLineItems;
         result = result * PRIME + ($mealPlanLineItems == null ? 0 : $mealPlanLineItems.hashCode());
         return result;
     }
+
     protected boolean canEqual(Object other) {
         return other instanceof MealPlanResource;
     }
