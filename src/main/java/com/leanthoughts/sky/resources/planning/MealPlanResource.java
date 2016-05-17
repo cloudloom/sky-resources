@@ -12,6 +12,7 @@ import java.util.Set;
 public class MealPlanResource extends BaseResource {
     private TenantResource tenant;
     private String description;
+    private PlanningCriteriaResource planningCriteria;
     private PlanningCriteriaAttributeResource planningCriteriaAttribute;
     private Set<MealPlanLineItemResource> mealPlanLineItems = new HashSet<MealPlanLineItemResource>(0);
 
@@ -24,6 +25,10 @@ public class MealPlanResource extends BaseResource {
 
     public String getDescription() {
         return this.description;
+    }
+
+    public PlanningCriteriaResource getPlanningCriteria() {
+        return this.planningCriteria;
     }
 
     public PlanningCriteriaAttributeResource getPlanningCriteriaAttribute() {
@@ -40,6 +45,10 @@ public class MealPlanResource extends BaseResource {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public void setPlanningCriteria(PlanningCriteriaResource planningCriteria) {
+        this.planningCriteria = planningCriteria;
     }
 
     public void setPlanningCriteriaAttribute(PlanningCriteriaAttributeResource planningCriteriaAttribute) {
@@ -62,6 +71,10 @@ public class MealPlanResource extends BaseResource {
         final Object other$description = other.description;
         if (this$description == null ? other$description != null : !this$description.equals(other$description))
             return false;
+        final Object this$planningCriteria = this.planningCriteria;
+        final Object other$planningCriteria = other.planningCriteria;
+        if (this$planningCriteria == null ? other$planningCriteria != null : !this$planningCriteria.equals(other$planningCriteria))
+            return false;
         final Object this$planningCriteriaAttribute = this.planningCriteriaAttribute;
         final Object other$planningCriteriaAttribute = other.planningCriteriaAttribute;
         if (this$planningCriteriaAttribute == null ? other$planningCriteriaAttribute != null : !this$planningCriteriaAttribute.equals(other$planningCriteriaAttribute))
@@ -80,6 +93,8 @@ public class MealPlanResource extends BaseResource {
         result = result * PRIME + ($tenant == null ? 0 : $tenant.hashCode());
         final Object $description = this.description;
         result = result * PRIME + ($description == null ? 0 : $description.hashCode());
+        final Object $planningCriteria = this.planningCriteria;
+        result = result * PRIME + ($planningCriteria == null ? 0 : $planningCriteria.hashCode());
         final Object $planningCriteriaAttribute = this.planningCriteriaAttribute;
         result = result * PRIME + ($planningCriteriaAttribute == null ? 0 : $planningCriteriaAttribute.hashCode());
         final Object $mealPlanLineItems = this.mealPlanLineItems;
