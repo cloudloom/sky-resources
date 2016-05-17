@@ -9,12 +9,20 @@ public class SearchCriteriaResource {
     private String key;
     private String operation;
     private Object value;
+    private String type;
 
     public SearchCriteriaResource(){}
     public SearchCriteriaResource(String key,String operation,Object value){
         this.key=key;
         this.operation=operation;
         this.value=value;
+    }
+
+    public SearchCriteriaResource(String key,String operation,Object value,String type){
+        this.key=key;
+        this.operation=operation;
+        this.value=value;
+        this.type=type;
     }
 
 
@@ -40,6 +48,14 @@ public class SearchCriteriaResource {
 
     public void setValue(Object value) {
         this.value = value;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 }
 
