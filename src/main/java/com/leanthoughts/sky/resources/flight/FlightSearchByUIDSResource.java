@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.leanthoughts.sky.resources.pagination.PageableResource;
 
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created by sadath on 01-Apr-2016.
@@ -12,16 +13,16 @@ import java.util.List;
 @JsonInclude(value = JsonInclude.Include.NON_NULL)
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class FlightSearchByUIDSResource {
-    private List<String> flightUIDS;
+    private Set<String> flightUIDS;
     private String upliftStation;
     private String unloadStation;
     private PageableResource pageableResource;
 
-    public List<String> getFlightUIDS() {
+    public Set<String> getFlightUIDS() {
         return flightUIDS;
     }
 
-    public void setFlightUIDS(List<String> flightUIDS) {
+    public void setFlightUIDS(Set<String> flightUIDS) {
         this.flightUIDS = flightUIDS;
     }
 
