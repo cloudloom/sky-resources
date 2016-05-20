@@ -1,6 +1,7 @@
 package com.leanthoughts.sky.resources.flight;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.leanthoughts.sky.resources.dictionary.FlightSearchType;
 import com.leanthoughts.sky.resources.pagination.PageableResource;
 
 import java.util.Date;
@@ -23,6 +24,7 @@ public class FlightSearchResource {
     private Date std;
     private String upliftStation;
     private String unloadStation;
+    private FlightSearchType flightSearchType;
 
     private PageableResource pageableResource;
 
@@ -104,5 +106,13 @@ public class FlightSearchResource {
 
     public void setUnloadStation(String unloadStation) {
         this.unloadStation = unloadStation;
+    }
+
+    public FlightSearchType getFlightSearchType() {
+        return flightSearchType;
+    }
+
+    public void setFlightSearchType(FlightSearchType flightSearchType) {
+        this.flightSearchType = flightSearchType;
     }
 }

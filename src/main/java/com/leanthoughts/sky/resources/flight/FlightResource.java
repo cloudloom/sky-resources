@@ -3,6 +3,7 @@ package com.leanthoughts.sky.resources.flight;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreType;
 import com.leanthoughts.sky.resources.BaseResource;
+import com.leanthoughts.sky.resources.order.CateringOrderStatus;
 import com.leanthoughts.sky.resources.planning.MealPlanResource;
 import com.leanthoughts.sky.resources.planning.StationResource;
 
@@ -38,6 +39,8 @@ public class FlightResource extends BaseResource {
     private Boolean BOBStatus;
     private Set<Station> station;
     private String tailNo;
+    private boolean hasCateringOrder;
+    private CateringOrderStatus cateringOrderStatus;
 
     public FlightResource() {
     }
@@ -231,6 +234,22 @@ public class FlightResource extends BaseResource {
 
     public void setTailNo(String tailNo) {
         this.tailNo = tailNo;
+    }
+
+    public boolean isHasCateringOrder() {
+        return hasCateringOrder;
+    }
+
+    public void setHasCateringOrder(boolean hasCateringOrder) {
+        this.hasCateringOrder = hasCateringOrder;
+    }
+
+    public CateringOrderStatus getCateringOrderStatus() {
+        return cateringOrderStatus;
+    }
+
+    public void setCateringOrderStatus(CateringOrderStatus cateringOrderStatus) {
+        this.cateringOrderStatus = cateringOrderStatus;
     }
 
     @Override
