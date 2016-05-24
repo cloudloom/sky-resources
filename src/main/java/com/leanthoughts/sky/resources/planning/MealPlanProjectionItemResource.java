@@ -21,7 +21,7 @@ public class MealPlanProjectionItemResource extends BaseResource {
     private String category;
     private Double count;
     @JsonDeserialize(using = CountTypeDeserializer.class)
-    private CountType countType;
+    private CountType countType;//From UI It Is Sent As "countType": "PERCENTAGE"
     private Map<String, ArticleResource> productMetaData = new HashMap<String, ArticleResource>();
     private Map<String, MealCategoryResource> categoryMetaData = new HashMap<String, MealCategoryResource>();
 

@@ -27,6 +27,8 @@ public class ScheduleResource extends BaseResource {
     private String period;
     private Boolean BOBStatus;
     private Set<FlightResource.Station> station;
+    private String fromAirportCode;
+    private String toAirportCode;
 
 
 
@@ -135,6 +137,22 @@ public class ScheduleResource extends BaseResource {
 
     public void setPeriod(String period) {
         this.period = period;
+    }
+
+    public String getFromAirportCode() {
+        return fromAirportCode;
+    }
+
+    public void setFromAirportCode(String fromAirportCode) {
+        this.fromAirportCode = fromAirportCode;
+    }
+
+    public String getToAirportCode() {
+        return toAirportCode;
+    }
+
+    public void setToAirportCode(String toAirportCode) {
+        this.toAirportCode = toAirportCode;
     }
 
     public Boolean getBOBStatus() {

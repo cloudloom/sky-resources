@@ -1,9 +1,20 @@
 package com.leanthoughts.sky.resources.order;
 
-public enum CateringOrderStatus {
-    CREATED,
-    MODIFIED,
-    CONFIRMED,
-    PROCUREMENT_INITIATED,
-    UPLIFTED
+public class CateringOrderStatus {
+    private String cateringOrderStatus;
+
+    public String getCateringOrderStatus() {
+        return cateringOrderStatus;
+    }
+
+    public void setCateringOrderStatus(String cateringOrderStatus) {
+        this.cateringOrderStatus = cateringOrderStatus;
+    }
+
+    public CateringOrderStatus(String cateringOrderStatus) {
+        this.cateringOrderStatus = cateringOrderStatus;
+    }
+
+    public CateringOrderStatus() {
+    }
 }
