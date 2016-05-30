@@ -24,6 +24,7 @@ public class FlightSearchResource {
     private Date std;
     private String upliftStation;
     private String unloadStation;
+    private String tailNumber;
     private FlightSearchType flightSearchType;
 
     private PageableResource pageableResource;
@@ -106,6 +107,14 @@ public class FlightSearchResource {
 
     public void setUnloadStation(String unloadStation) {
         this.unloadStation = unloadStation;
+    }
+
+    public String getTailNumber() {
+        return tailNumber;
+    }
+
+    public void setTailNumber(String tailNumber) {
+        this.tailNumber = tailNumber;
     }
 
     public FlightSearchType getFlightSearchType() {
