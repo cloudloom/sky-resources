@@ -17,7 +17,7 @@ public class PurchaseOrderResource extends BaseOrderResource {
     private List<String> referenceOrder;
     private LocalDate deliveryDate;
     private String deliveryAddress;
-    private String status;
+    private PurchaseOrderStatus status;
     private String subType;
     private String planningGroup;
 
@@ -89,11 +89,11 @@ public class PurchaseOrderResource extends BaseOrderResource {
         this.deliveryAddress = deliveryAddress;
     }
 
-    public String getStatus() {
+    public PurchaseOrderStatus getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(PurchaseOrderStatus status) {
         this.status = status;
     }
 

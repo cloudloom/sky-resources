@@ -1,13 +1,17 @@
 package com.leanthoughts.sky.resources.order;
 
-public class CateringOrderStatus {
+/**
+ * @author fahad
+ * @since 01-06-2016.
+ */
+public class PurchaseOrderStatus {
 
     private String name;
     private String abbrieviation;
 
-    public CateringOrderStatus() {}
+    public PurchaseOrderStatus() {}
 
-    public CateringOrderStatus(String name, String abbrieviation) {
+    public PurchaseOrderStatus(String name, String abbrieviation) {
         this.name = name;
         this.abbrieviation = abbrieviation;
     }
