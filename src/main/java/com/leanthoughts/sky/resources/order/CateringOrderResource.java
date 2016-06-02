@@ -19,7 +19,7 @@ public class CateringOrderResource extends BaseOrderResource {
     private Integer preBookingsCount;
     private Integer premiumBookingCount;
     private LocalDateTime confirmationDateTime;
-    private CateringOrderStatus orderStatus;
+    private CateringOrderStatus status;
     private FlightResource flight;
     private PrebookingResource preBooking;
 
@@ -77,7 +77,7 @@ public class CateringOrderResource extends BaseOrderResource {
     }
 
     public CateringOrderStatus getOrderStatus() {
-        return this.orderStatus;
+        return this.status;
     }
 
     public FlightResource getFlight() {
@@ -137,7 +137,7 @@ public class CateringOrderResource extends BaseOrderResource {
     }
 
     public void setOrderStatus(CateringOrderStatus orderStatus) {
-        this.orderStatus = orderStatus;
+        this.status = orderStatus;
     }
 
     public String getTailNo() {
@@ -204,8 +204,8 @@ public class CateringOrderResource extends BaseOrderResource {
         final Object other$confirmationDateTime = other.confirmationDateTime;
         if (this$confirmationDateTime == null ? other$confirmationDateTime != null : !this$confirmationDateTime.equals(other$confirmationDateTime))
             return false;
-        final Object this$orderStatus = this.orderStatus;
-        final Object other$orderStatus = other.orderStatus;
+        final Object this$orderStatus = this.status;
+        final Object other$orderStatus = other.status;
         if (this$orderStatus == null ? other$orderStatus != null : !this$orderStatus.equals(other$orderStatus))
             return false;
         return true;
@@ -230,7 +230,7 @@ public class CateringOrderResource extends BaseOrderResource {
         result = result * PRIME + ($premiumBookingCount == null ? 0 : $premiumBookingCount.hashCode());
         final Object $confirmationDateTime = this.confirmationDateTime;
         result = result * PRIME + ($confirmationDateTime == null ? 0 : $confirmationDateTime.hashCode());
-        final Object $orderStatus = this.orderStatus;
+        final Object $orderStatus = this.status;
         result = result * PRIME + ($orderStatus == null ? 0 : $orderStatus.hashCode());
         return result;
     }
