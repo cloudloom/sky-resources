@@ -4,7 +4,6 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.leanthoughts.sky.resources.pagination.PageableResource;
 
-import java.util.List;
 import java.util.Set;
 
 /**

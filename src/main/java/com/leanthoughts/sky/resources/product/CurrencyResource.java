@@ -1,13 +1,6 @@
 package com.leanthoughts.sky.resources.product;
 
 import com.leanthoughts.sky.resources.BaseResource;
-import com.leanthoughts.sky.resources.dictionary.jpa.impl.BaseEntity;
-import lombok.Data;
-
-import javax.persistence.Column;
-import javax.persistence.Embedded;
-import javax.persistence.Entity;
-import javax.persistence.Table;
 
 /**
  * Created by sadath on 05-Jan-2016.
