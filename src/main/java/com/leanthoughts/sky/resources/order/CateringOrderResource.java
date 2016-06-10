@@ -48,6 +48,10 @@ public class CateringOrderResource extends BaseOrderResource {
         return this.flightSector;
     }
 
+    public String getFlightUid() {
+        return this.flightUid;
+    }
+
     public String getCateringExecutive() {
         return this.cateringExecutive;
     }
@@ -76,28 +80,40 @@ public class CateringOrderResource extends BaseOrderResource {
         return this.confirmationDateTime;
     }
 
-    public CateringOrderStatus getOrderStatus() {
+    public CateringOrderStatus getStatus() {
         return this.status;
     }
 
     public FlightResource getFlight() {
-        return flight;
+        return this.flight;
     }
 
     public PrebookingResource getPreBooking() {
-        return preBooking;
+        return this.preBooking;
     }
 
-    public void setPreBooking(PrebookingResource preBooking) {
-        this.preBooking = preBooking;
+    public String getTailNo() {
+        return this.tailNo;
     }
 
-    public void setFlight(FlightResource flight) {
-        this.flight = flight;
+    public StationResource getUpliftStationResource() {
+        return this.upliftStationResource;
+    }
+
+    public StationResource getUnloadStationResource() {
+        return this.unloadStationResource;
+    }
+
+    public Set<ArticleResource> getProducts() {
+        return this.products;
     }
 
     public void setFlightSector(FlightSectorResource flightSector) {
         this.flightSector = flightSector;
+    }
+
+    public void setFlightUid(String flightUid) {
+        this.flightUid = flightUid;
     }
 
     public void setCateringExecutive(String cateringExecutive) {
@@ -128,44 +144,28 @@ public class CateringOrderResource extends BaseOrderResource {
         this.confirmationDateTime = confirmationDateTime;
     }
 
-    public String getFlightUid() {
-        return flightUid;
+    public void setStatus(CateringOrderStatus status) {
+        this.status = status;
     }
 
-    public void setFlightUid(String flightUid) {
-        this.flightUid = flightUid;
+    public void setFlight(FlightResource flight) {
+        this.flight = flight;
     }
 
-    public void setOrderStatus(CateringOrderStatus orderStatus) {
-        this.status = orderStatus;
-    }
-
-    public String getTailNo() {
-        return tailNo;
+    public void setPreBooking(PrebookingResource preBooking) {
+        this.preBooking = preBooking;
     }
 
     public void setTailNo(String tailNo) {
         this.tailNo = tailNo;
     }
 
-    public StationResource getUpliftStationResource() {
-        return upliftStationResource;
-    }
-
     public void setUpliftStationResource(StationResource upliftStationResource) {
         this.upliftStationResource = upliftStationResource;
     }
 
-    public StationResource getUnloadStationResource() {
-        return unloadStationResource;
-    }
-
     public void setUnloadStationResource(StationResource unloadStationResource) {
         this.unloadStationResource = unloadStationResource;
-    }
-
-    public Set<ArticleResource> getProducts() {
-        return products;
     }
 
     public boolean equals(Object o) {
@@ -177,6 +177,9 @@ public class CateringOrderResource extends BaseOrderResource {
         final Object other$flightSector = other.flightSector;
         if (this$flightSector == null ? other$flightSector != null : !this$flightSector.equals(other$flightSector))
             return false;
+        final Object this$flightUid = this.flightUid;
+        final Object other$flightUid = other.flightUid;
+        if (this$flightUid == null ? other$flightUid != null : !this$flightUid.equals(other$flightUid)) return false;
         final Object this$cateringExecutive = this.cateringExecutive;
         final Object other$cateringExecutive = other.cateringExecutive;
         if (this$cateringExecutive == null ? other$cateringExecutive != null : !this$cateringExecutive.equals(other$cateringExecutive))
@@ -204,10 +207,30 @@ public class CateringOrderResource extends BaseOrderResource {
         final Object other$confirmationDateTime = other.confirmationDateTime;
         if (this$confirmationDateTime == null ? other$confirmationDateTime != null : !this$confirmationDateTime.equals(other$confirmationDateTime))
             return false;
-        final Object this$orderStatus = this.status;
-        final Object other$orderStatus = other.status;
-        if (this$orderStatus == null ? other$orderStatus != null : !this$orderStatus.equals(other$orderStatus))
+        final Object this$status = this.status;
+        final Object other$status = other.status;
+        if (this$status == null ? other$status != null : !this$status.equals(other$status)) return false;
+        final Object this$flight = this.flight;
+        final Object other$flight = other.flight;
+        if (this$flight == null ? other$flight != null : !this$flight.equals(other$flight)) return false;
+        final Object this$preBooking = this.preBooking;
+        final Object other$preBooking = other.preBooking;
+        if (this$preBooking == null ? other$preBooking != null : !this$preBooking.equals(other$preBooking))
             return false;
+        final Object this$tailNo = this.tailNo;
+        final Object other$tailNo = other.tailNo;
+        if (this$tailNo == null ? other$tailNo != null : !this$tailNo.equals(other$tailNo)) return false;
+        final Object this$upliftStationResource = this.upliftStationResource;
+        final Object other$upliftStationResource = other.upliftStationResource;
+        if (this$upliftStationResource == null ? other$upliftStationResource != null : !this$upliftStationResource.equals(other$upliftStationResource))
+            return false;
+        final Object this$unloadStationResource = this.unloadStationResource;
+        final Object other$unloadStationResource = other.unloadStationResource;
+        if (this$unloadStationResource == null ? other$unloadStationResource != null : !this$unloadStationResource.equals(other$unloadStationResource))
+            return false;
+        final Object this$products = this.products;
+        final Object other$products = other.products;
+        if (this$products == null ? other$products != null : !this$products.equals(other$products)) return false;
         return true;
     }
 
@@ -216,6 +239,8 @@ public class CateringOrderResource extends BaseOrderResource {
         int result = 1;
         final Object $flightSector = this.flightSector;
         result = result * PRIME + ($flightSector == null ? 0 : $flightSector.hashCode());
+        final Object $flightUid = this.flightUid;
+        result = result * PRIME + ($flightUid == null ? 0 : $flightUid.hashCode());
         final Object $cateringExecutive = this.cateringExecutive;
         result = result * PRIME + ($cateringExecutive == null ? 0 : $cateringExecutive.hashCode());
         final Object $upliftStation = this.upliftStation;
@@ -230,8 +255,20 @@ public class CateringOrderResource extends BaseOrderResource {
         result = result * PRIME + ($premiumBookingCount == null ? 0 : $premiumBookingCount.hashCode());
         final Object $confirmationDateTime = this.confirmationDateTime;
         result = result * PRIME + ($confirmationDateTime == null ? 0 : $confirmationDateTime.hashCode());
-        final Object $orderStatus = this.status;
-        result = result * PRIME + ($orderStatus == null ? 0 : $orderStatus.hashCode());
+        final Object $status = this.status;
+        result = result * PRIME + ($status == null ? 0 : $status.hashCode());
+        final Object $flight = this.flight;
+        result = result * PRIME + ($flight == null ? 0 : $flight.hashCode());
+        final Object $preBooking = this.preBooking;
+        result = result * PRIME + ($preBooking == null ? 0 : $preBooking.hashCode());
+        final Object $tailNo = this.tailNo;
+        result = result * PRIME + ($tailNo == null ? 0 : $tailNo.hashCode());
+        final Object $upliftStationResource = this.upliftStationResource;
+        result = result * PRIME + ($upliftStationResource == null ? 0 : $upliftStationResource.hashCode());
+        final Object $unloadStationResource = this.unloadStationResource;
+        result = result * PRIME + ($unloadStationResource == null ? 0 : $unloadStationResource.hashCode());
+        final Object $products = this.products;
+        result = result * PRIME + ($products == null ? 0 : $products.hashCode());
         return result;
     }
 
