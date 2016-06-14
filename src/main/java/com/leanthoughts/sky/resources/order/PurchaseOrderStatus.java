@@ -7,13 +7,13 @@ package com.leanthoughts.sky.resources.order;
 public class PurchaseOrderStatus {
 
     private String name;
-    private String abbrieviation;
+    private String abbreviation;
 
     public PurchaseOrderStatus() {}
 
-    public PurchaseOrderStatus(String name, String abbrieviation) {
+    public PurchaseOrderStatus(String name, String abbreviation) {
         this.name = name;
-        this.abbrieviation = abbrieviation;
+        this.abbreviation = abbreviation;
     }
 
     public String getName() {
@@ -24,11 +24,11 @@ public class PurchaseOrderStatus {
         this.name = name;
     }
 
-    public String getAbbrieviation() {
-        return abbrieviation;
+    public String getAbbreviation() {
+        return abbreviation;
     }
 
-    public void setAbbrieviation(String abbrieviation) {
-        this.abbrieviation = abbrieviation;
+    public void setAbbreviation(String abbreviation) {
+        this.abbreviation = abbreviation;
     }
 }

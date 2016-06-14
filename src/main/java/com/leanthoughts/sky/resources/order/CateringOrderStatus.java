@@ -3,13 +3,13 @@ package com.leanthoughts.sky.resources.order;
 public class CateringOrderStatus {
 
     private String name;
-    private String abbrieviation;
+    private String abbreviation;
 
     public CateringOrderStatus() {}
 
-    public CateringOrderStatus(String name, String abbrieviation) {
+    public CateringOrderStatus(String name, String abbreviation) {
         this.name = name;
-        this.abbrieviation = abbrieviation;
+        this.abbreviation = abbreviation;
     }
 
     public String getName() {
@@ -20,11 +20,11 @@ public class CateringOrderStatus {
         this.name = name;
     }
 
-    public String getAbbrieviation() {
-        return abbrieviation;
+    public String getAbbreviation() {
+        return abbreviation;
     }
 
-    public void setAbbrieviation(String abbrieviation) {
-        this.abbrieviation = abbrieviation;
+    public void setAbbreviation(String abbreviation) {
+        this.abbreviation = abbreviation;
     }
 }
