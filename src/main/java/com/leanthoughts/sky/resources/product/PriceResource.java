@@ -7,7 +7,7 @@ import com.leanthoughts.sky.resources.BaseResource;
  */
 public class PriceResource extends BaseResource {
     private PriceType priceType;
-    private CurrencyResource currency;
+    private String currency;
     private Double amount;
 
     public PriceResource() {
@@ -17,7 +17,7 @@ public class PriceResource extends BaseResource {
         return this.priceType;
     }
 
-    public CurrencyResource getCurrency() {
+    public String getCurrency() {
         return this.currency;
     }
 
@@ -29,7 +29,7 @@ public class PriceResource extends BaseResource {
         this.priceType = priceType;
     }
 
-    public void setCurrency(CurrencyResource currency) {
+    public void setCurrency(String currency) {
         this.currency = currency;
     }
 
