@@ -1,6 +1,7 @@
 package com.leanthoughts.sky.resources.order;
 
 import com.leanthoughts.sky.resources.BaseResource;
+import com.leanthoughts.sky.resources.planning.MealCategoryResource;
 import com.leanthoughts.sky.resources.product.ProductResource;
 import org.javamoney.moneta.Money;
 
@@ -12,6 +13,7 @@ public class BaseLineItemResource extends BaseResource {
     private Integer sequenceNumber;
     private String productReference;
     private String categoryReference;
+    private MealCategoryResource category;
     private String groupReference;
     private Money unitPrice;
     private int quantity;
@@ -100,6 +102,14 @@ public class BaseLineItemResource extends BaseResource {
 
     public void setProductMetaData(Map<String, ProductResource> productMetaData) {
         this.productMetaData = productMetaData;
+    }
+
+    public MealCategoryResource getCategory() {
+        return category;
+    }
+
+    public void setCategory(MealCategoryResource category) {
+        this.category = category;
     }
 
     public String toString() {

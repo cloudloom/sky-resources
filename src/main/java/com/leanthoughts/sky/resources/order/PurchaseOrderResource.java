@@ -1,5 +1,7 @@
 package com.leanthoughts.sky.resources.order;
 
+import com.leanthoughts.sky.resources.planning.StationResource;
+
 import java.time.LocalDate;
 import java.util.List;
 
@@ -17,6 +19,7 @@ public class PurchaseOrderResource extends BaseOrderResource {
     private List<String> referenceOrder;
     private LocalDate deliveryDate;
     private String deliveryAddress;
+    private StationResource deliveryStation;
     private PurchaseOrderStatus status;
     private String subType;
     private String planningGroup;
@@ -135,5 +138,13 @@ public class PurchaseOrderResource extends BaseOrderResource {
 
     public void setContactPerson(String contactPerson) {
         this.contactPerson = contactPerson;
+    }
+
+    public StationResource getDeliveryStation() {
+        return deliveryStation;
+    }
+
+    public void setDeliveryStation(StationResource deliveryStation) {
+        this.deliveryStation = deliveryStation;
     }
 }
