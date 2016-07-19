@@ -22,6 +22,8 @@ public class CateringOrderResource extends BaseOrderResource {
     private CateringOrderStatus status;
     private FlightResource flight;
     private PrebookingResource preBooking;
+    private Set<BaseLineItemResource> upliftQuantities = new HashSet<>(0);
+    private String orderId;
 
     /** Customized Properties For App**/
     private String tailNo;
@@ -166,6 +168,24 @@ public class CateringOrderResource extends BaseOrderResource {
 
     public void setUnloadStationResource(StationResource unloadStationResource) {
         this.unloadStationResource = unloadStationResource;
+    }
+
+    public Set<BaseLineItemResource> getUpliftQuantities() {
+        return upliftQuantities;
+    }
+
+    public void setUpliftQuantities(Set<BaseLineItemResource> upliftQuantities) {
+        this.upliftQuantities = upliftQuantities;
+    }
+
+    @Override
+    public String getOrderId() {
+        return orderId;
+    }
+
+    @Override
+    public void setOrderId(String orderId) {
+        this.orderId = orderId;
     }
 
     public boolean equals(Object o) {
