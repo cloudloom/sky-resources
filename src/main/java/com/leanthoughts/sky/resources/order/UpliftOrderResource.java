@@ -1,5 +1,8 @@
 package com.leanthoughts.sky.resources.order;
 
+import com.leanthoughts.sky.resources.flight.AirportResource;
+import com.leanthoughts.sky.resources.planning.StationResource;
+
 /**
  * @author fahad
  * @since 19-07-2016.
@@ -10,6 +13,11 @@ public class UpliftOrderResource extends BaseOrderResource {
     private FlightSectorResource flightSector;
     private String upliftStation;
     private String unloadStation;
+    private StationResource upliftStationMeta;
+    private StationResource unloadStationMeta;
+    private AirportResource from;
+    private AirportResource to;
+    private String upliftUid;
 
     public UpliftOrderResource(FlightSectorResource flightSector, String upliftStation, String unloadStation) {
         this.flightSector = flightSector;
@@ -17,7 +25,7 @@ public class UpliftOrderResource extends BaseOrderResource {
         this.unloadStation = unloadStation;
     }
 
-    protected UpliftOrderResource(){}
+    public UpliftOrderResource(){}
 
     public static String getType() {
         return type;
@@ -45,6 +53,46 @@ public class UpliftOrderResource extends BaseOrderResource {
 
     public void setUnloadStation(String unloadStation) {
         this.unloadStation = unloadStation;
+    }
+
+    public StationResource getUpliftStationMeta() {
+        return upliftStationMeta;
+    }
+
+    public void setUpliftStationMeta(StationResource upliftStationMeta) {
+        this.upliftStationMeta = upliftStationMeta;
+    }
+
+    public StationResource getUnloadStationMeta() {
+        return unloadStationMeta;
+    }
+
+    public void setUnloadStationMeta(StationResource unloadStationMeta) {
+        this.unloadStationMeta = unloadStationMeta;
+    }
+
+    public AirportResource getFrom() {
+        return from;
+    }
+
+    public void setFrom(AirportResource from) {
+        this.from = from;
+    }
+
+    public AirportResource getTo() {
+        return to;
+    }
+
+    public void setTo(AirportResource to) {
+        this.to = to;
+    }
+
+    public String getUpliftUid() {
+        return upliftUid;
+    }
+
+    public void setUpliftUid(String upliftUid) {
+        this.upliftUid = upliftUid;
     }
 
     @Override
