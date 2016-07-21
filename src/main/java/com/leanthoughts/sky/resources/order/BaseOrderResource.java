@@ -11,6 +11,7 @@ public abstract class BaseOrderResource extends BaseResource{
     private LocalDateTime created;
     private String createdBy;
     private String modifiedBy;
+    private String comments;
     protected LocalDateTime lastModified;
     protected String orderType;
     private Map<DateType, Date> orderDates = new HashMap<>(0);
@@ -116,6 +117,14 @@ public abstract class BaseOrderResource extends BaseResource{
 
     public void setLineItems(Set<BaseLineItemResource> lineItems) {
         this.lineItems = lineItems;
+    }
+
+    public String getComments() {
+        return comments;
+    }
+
+    public void setComments(String comments) {
+        this.comments = comments;
     }
 
     public boolean equals(Object o) {

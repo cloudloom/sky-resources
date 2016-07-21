@@ -18,6 +18,7 @@ public class UpliftOrderResource extends BaseOrderResource {
     private AirportResource from;
     private AirportResource to;
     private String upliftUid;
+    private CateringOrderStatus status;
 
     public UpliftOrderResource(FlightSectorResource flightSector, String upliftStation, String unloadStation) {
         this.flightSector = flightSector;
@@ -93,6 +94,14 @@ public class UpliftOrderResource extends BaseOrderResource {
 
     public void setUpliftUid(String upliftUid) {
         this.upliftUid = upliftUid;
+    }
+
+    public CateringOrderStatus getStatus() {
+        return status;
+    }
+
+    public void setStatus(CateringOrderStatus status) {
+        this.status = status;
     }
 
     @Override

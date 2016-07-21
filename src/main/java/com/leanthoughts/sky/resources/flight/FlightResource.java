@@ -36,6 +36,7 @@ public class FlightResource extends BaseResource {
     private String flightType;
     private PlaneResource plane;
     private ScheduleResource schedule;
+    private String scheduleUid;
     private Boolean BOBStatus;
     private Set<Station> station;
     private String tailNo;
@@ -250,6 +251,14 @@ public class FlightResource extends BaseResource {
 
     public void setCateringOrderStatus(CateringOrderStatus cateringOrderStatus) {
         this.cateringOrderStatus = cateringOrderStatus;
+    }
+
+    public String getScheduleUid() {
+        return scheduleUid;
+    }
+
+    public void setScheduleUid(String scheduleUid) {
+        this.scheduleUid = scheduleUid;
     }
 
     @Override
