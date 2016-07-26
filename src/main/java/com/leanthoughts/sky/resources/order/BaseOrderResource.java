@@ -19,6 +19,7 @@ public abstract class BaseOrderResource extends BaseResource{
     private Set<PartnerFunction> partnerFunctions = new HashSet<>(0);
     private OrganizationResource organization;
     private Set<BaseLineItemResource> lineItems = new HashSet<BaseLineItemResource>();
+    private Double totalAmount;
 
     public BaseOrderResource() {
     }
@@ -125,6 +126,14 @@ public abstract class BaseOrderResource extends BaseResource{
 
     public void setComments(String comments) {
         this.comments = comments;
+    }
+
+    public Double getTotalAmount() {
+        return totalAmount;
+    }
+
+    public void setTotalAmount(Double totalAmount) {
+        this.totalAmount = totalAmount;
     }
 
     public boolean equals(Object o) {

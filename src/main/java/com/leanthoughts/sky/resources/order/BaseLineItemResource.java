@@ -16,6 +16,7 @@ public class BaseLineItemResource extends BaseResource {
     private MealCategoryResource category;
     private String groupReference;
     private Money unitPrice;
+    private Double price;
     private int quantity;
     private String comment;
     private String orderReference;
@@ -102,6 +103,14 @@ public class BaseLineItemResource extends BaseResource {
 
     public void setProductMetaData(Map<String, ProductResource> productMetaData) {
         this.productMetaData = productMetaData;
+    }
+
+    public Double getPrice() {
+        return price;
+    }
+
+    public void setPrice(Double price) {
+        this.price = price;
     }
 
     public MealCategoryResource getCategory() {

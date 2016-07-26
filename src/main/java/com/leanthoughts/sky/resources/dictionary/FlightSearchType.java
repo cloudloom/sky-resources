@@ -8,8 +8,8 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 @JsonFormat(shape = JsonFormat.Shape.OBJECT)
 public enum FlightSearchType {
     ALL_FLIGHTS("All Flights", "ALL_FLIGHTS"),
-    FLIGHTS_WITH_ONLY_CATERING_ORDERS("Flights With Only Catering Orders", "FLIGHTS_WITH_ONLY_CATERING_ORDERS"),
-    FLIGHTS_WITH_NO_CATERING_ORDERS("Flights With No Catering Orders", "FLIGHTS_WITH_NO_CATERING_ORDERS");
+    FLIGHTS_WITH_ONLY_CATERING_ORDERS("Flights With Catering Orders", "FLIGHTS_WITH_ONLY_CATERING_ORDERS"),
+    FLIGHTS_WITH_NO_CATERING_ORDERS("Flights Without Catering Orders", "FLIGHTS_WITH_NO_CATERING_ORDERS");
 
     private final String flightSearchType;
     private final String abbreviation;
