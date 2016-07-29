@@ -11,6 +11,7 @@ public class UnloadOrderResource extends BaseOrderResource {
 
     private UnloadOrderStatus status;
     private Set<BaseLineItemResource> perishableWastage = new HashSet<BaseLineItemResource>();
+    private String unloadUid;
 
     public UnloadOrderStatus getStatus() {
         return status;
@@ -26,6 +27,14 @@ public class UnloadOrderResource extends BaseOrderResource {
 
     public void setPerishableWastage(Set<BaseLineItemResource> perishableWastage) {
         this.perishableWastage = perishableWastage;
+    }
+
+    public String getUnloadUid() {
+        return unloadUid;
+    }
+
+    public void setUnloadUid(String unloadUid) {
+        this.unloadUid = unloadUid;
     }
 
     UnloadOrderResource(){}
