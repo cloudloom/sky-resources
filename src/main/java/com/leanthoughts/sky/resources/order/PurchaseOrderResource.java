@@ -1,5 +1,7 @@
 package com.leanthoughts.sky.resources.order;
 
+import com.leanthoughts.sky.resources.partner.EmployeeResource;
+import com.leanthoughts.sky.resources.partner.VendorResource;
 import com.leanthoughts.sky.resources.planning.StationResource;
 
 import java.time.LocalDate;
@@ -23,11 +25,14 @@ public class PurchaseOrderResource extends BaseOrderResource {
     private PurchaseOrderStatus status;
     private String subType;
     private String planningGroup;
+    private EmployeeResource storeEmployee;
+    private EmployeeResource cateringExecutive;
 
     /** Customized Properties For App**/
     private String orderingParty;
     private String recepientParty;
     private String contactPerson;
+    private VendorResource vendor;
 
     public PurchaseOrderResource() {
     }
@@ -146,5 +151,29 @@ public class PurchaseOrderResource extends BaseOrderResource {
 
     public void setDeliveryStation(StationResource deliveryStation) {
         this.deliveryStation = deliveryStation;
+    }
+
+    public VendorResource getVendor() {
+        return vendor;
+    }
+
+    public void setVendor(VendorResource vendor) {
+        this.vendor = vendor;
+    }
+
+    public EmployeeResource getStoreEmployee() {
+        return storeEmployee;
+    }
+
+    public void setStoreEmployee(EmployeeResource storeEmployee) {
+        this.storeEmployee = storeEmployee;
+    }
+
+    public EmployeeResource getCateringExecutive() {
+        return cateringExecutive;
+    }
+
+    public void setCateringExecutive(EmployeeResource cateringExecutive) {
+        this.cateringExecutive = cateringExecutive;
     }
 }

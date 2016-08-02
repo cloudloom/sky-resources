@@ -21,6 +21,10 @@ public class ArticleResource extends ProductResource {
     private Set<CategoryResource> categories = new HashSet<CategoryResource>(0);
     private Set<MealCategoryResource> mealCategories = new HashSet<MealCategoryResource>(0);
     private Set<PlanningCriteriaGroupResource> planningCriteriaGroups = new HashSet<PlanningCriteriaGroupResource>();
+    private String unitOfMeasure;
+    private String materialGroup;
+    private String materialCategory;
+    private Set<ProductBundleItemResource> items = new HashSet<>(0);
 
     /** Customized Properties For App**/
     private double bobQuantity;
@@ -141,6 +145,38 @@ public class ArticleResource extends ProductResource {
 
     public void setPlanningCriteriaGroups(Set<PlanningCriteriaGroupResource> planningCriteriaGroups) {
         this.planningCriteriaGroups = planningCriteriaGroups;
+    }
+
+    public String getUnitOfMeasure() {
+        return unitOfMeasure;
+    }
+
+    public void setUnitOfMeasure(String unitOfMeasure) {
+        this.unitOfMeasure = unitOfMeasure;
+    }
+
+    public String getMaterialGroup() {
+        return materialGroup;
+    }
+
+    public void setMaterialGroup(String materialGroup) {
+        this.materialGroup = materialGroup;
+    }
+
+    public String getMaterialCategory() {
+        return materialCategory;
+    }
+
+    public void setMaterialCategory(String materialCategory) {
+        this.materialCategory = materialCategory;
+    }
+
+    public Set<ProductBundleItemResource> getItems() {
+        return items;
+    }
+
+    public void setItems(Set<ProductBundleItemResource> items) {
+        this.items = items;
     }
 
     public boolean equals(Object o) {

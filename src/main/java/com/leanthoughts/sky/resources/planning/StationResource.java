@@ -15,6 +15,7 @@ public class StationResource extends BaseResource {
     private String airport;
     private AirportResource airportDetails;
     private String orgUnitID;
+    private String employeeUsername;
 
     public StationResource() {
     }
@@ -65,6 +66,14 @@ public class StationResource extends BaseResource {
 
     public void setOrgUnitID(String orgUnitID) {
         this.orgUnitID = orgUnitID;
+    }
+
+    public String getEmployeeUsername() {
+        return employeeUsername;
+    }
+
+    public void setEmployeeUsername(String employeeUsername) {
+        this.employeeUsername = employeeUsername;
     }
 
     public boolean equals(Object o) {
