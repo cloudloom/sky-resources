@@ -1,7 +1,6 @@
 package com.leanthoughts.sky.resources.partner;
 
 import com.leanthoughts.sky.resources.dictionary.Gender;
-import com.leanthoughts.sky.resources.dictionary.Phone;
 import com.leanthoughts.sky.resources.dictionary.Salutation;
 import com.leanthoughts.sky.resources.dictionary.jpa.impl.BaseEntity;
 
@@ -17,7 +16,7 @@ public class EmployeeResource extends BaseEntity {
     private String middleName;
     private String lastName;
     private EmailResource email;
-    private Phone phone;
+    private PhoneResource phone;
     private LocalDate dateOfBirth;
     private Gender gender;
     private boolean isVerified;
@@ -29,7 +28,7 @@ public class EmployeeResource extends BaseEntity {
 
     EmployeeResource(){}
 
-    public EmployeeResource(Salutation salutation, String firstName, String middleName, String lastName, EmailResource email, Phone phone, LocalDate dateOfBirth, Gender gender, boolean isVerified, String employeeId, String orgUnit, String department, boolean isUser, String username) {
+    public EmployeeResource(Salutation salutation, String firstName, String middleName, String lastName, EmailResource email, PhoneResource phone, LocalDate dateOfBirth, Gender gender, boolean isVerified, String employeeId, String orgUnit, String department, boolean isUser, String username) {
         this.salutation = salutation;
         this.firstName = firstName;
         this.middleName = middleName;
@@ -46,7 +45,7 @@ public class EmployeeResource extends BaseEntity {
         this.username = username;
     }
 
-    public EmployeeResource(String uid, Salutation salutation, String firstName, String middleName, String lastName, EmailResource email, Phone phone, LocalDate dateOfBirth, Gender gender, boolean isVerified, String employeeId, String orgUnit, String department, boolean isUser, String username) {
+    public EmployeeResource(String uid, Salutation salutation, String firstName, String middleName, String lastName, EmailResource email, PhoneResource phone, LocalDate dateOfBirth, Gender gender, boolean isVerified, String employeeId, String orgUnit, String department, boolean isUser, String username) {
         super(uid);
         this.salutation = salutation;
         this.firstName = firstName;
@@ -104,11 +103,11 @@ public class EmployeeResource extends BaseEntity {
         this.email = email;
     }
 
-    public Phone getPhone() {
+    public PhoneResource getPhone() {
         return phone;
     }
 
-    public void setPhone(Phone phone) {
+    public void setPhone(PhoneResource phone) {
         this.phone = phone;
     }
 
