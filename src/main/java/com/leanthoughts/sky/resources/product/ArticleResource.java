@@ -24,6 +24,7 @@ public class ArticleResource extends ProductResource {
     private String unitOfMeasure;
     private String materialGroup;
     private String materialCategory;
+    private String type;
     private Set<ProductBundleItemResource> items = new HashSet<>(0);
 
     /** Customized Properties For App**/
@@ -177,6 +178,14 @@ public class ArticleResource extends ProductResource {
 
     public void setItems(Set<ProductBundleItemResource> items) {
         this.items = items;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 
     public boolean equals(Object o) {
