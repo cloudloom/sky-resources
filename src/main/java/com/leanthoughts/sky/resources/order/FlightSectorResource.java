@@ -3,15 +3,15 @@ package com.leanthoughts.sky.resources.order;
 import com.leanthoughts.sky.resources.BaseResource;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
+import java.time.LocalTime;
 
 public class FlightSectorResource extends BaseResource {
     private String flightNumber;
     private LocalDate flightDate;
     private String departureStation;
     private String arrivalStation;
-    private LocalDateTime departureTime;
-    private LocalDateTime arrivalTime;
+    private LocalTime departureTime;
+    private LocalTime arrivalTime;
     private String tailNo;
 
     public FlightSectorResource() {
@@ -33,11 +33,11 @@ public class FlightSectorResource extends BaseResource {
         return this.arrivalStation;
     }
 
-    public LocalDateTime getDepartureTime() {
+    public LocalTime getDepartureTime() {
         return this.departureTime;
     }
 
-    public LocalDateTime getArrivalTime() {
+    public LocalTime getArrivalTime() {
         return this.arrivalTime;
     }
 
@@ -61,11 +61,11 @@ public class FlightSectorResource extends BaseResource {
         this.arrivalStation = arrivalStation;
     }
 
-    public void setDepartureTime(LocalDateTime departureTime) {
+    public void setDepartureTime(LocalTime departureTime) {
         this.departureTime = departureTime;
     }
 
-    public void setArrivalTime(LocalDateTime arrivalTime) {
+    public void setArrivalTime(LocalTime arrivalTime) {
         this.arrivalTime = arrivalTime;
     }
 

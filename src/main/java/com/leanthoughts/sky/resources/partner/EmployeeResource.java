@@ -5,6 +5,7 @@ import com.leanthoughts.sky.resources.dictionary.Salutation;
 import com.leanthoughts.sky.resources.dictionary.jpa.impl.BaseEntity;
 
 import java.time.LocalDate;
+import java.util.List;
 
 /**
  * @author fahad
@@ -16,7 +17,7 @@ public class EmployeeResource extends BaseEntity {
     private String middleName;
     private String lastName;
     private EmailResource email;
-    private PhoneResource phone;
+    private List<PhoneResource> phones;
     private LocalDate dateOfBirth;
     private Gender gender;
     private boolean isVerified;
@@ -28,13 +29,13 @@ public class EmployeeResource extends BaseEntity {
 
     EmployeeResource(){}
 
-    public EmployeeResource(Salutation salutation, String firstName, String middleName, String lastName, EmailResource email, PhoneResource phone, LocalDate dateOfBirth, Gender gender, boolean isVerified, String employeeId, String orgUnit, String department, boolean isUser, String username) {
+    public EmployeeResource(Salutation salutation, String firstName, String middleName, String lastName, EmailResource email, List<PhoneResource> phones, LocalDate dateOfBirth, Gender gender, boolean isVerified, String employeeId, String orgUnit, String department, boolean isUser, String username) {
         this.salutation = salutation;
         this.firstName = firstName;
         this.middleName = middleName;
         this.lastName = lastName;
         this.email = email;
-        this.phone = phone;
+        this.phones = phones;
         this.dateOfBirth = dateOfBirth;
         this.gender = gender;
         this.isVerified = isVerified;
@@ -45,14 +46,14 @@ public class EmployeeResource extends BaseEntity {
         this.username = username;
     }
 
-    public EmployeeResource(String uid, Salutation salutation, String firstName, String middleName, String lastName, EmailResource email, PhoneResource phone, LocalDate dateOfBirth, Gender gender, boolean isVerified, String employeeId, String orgUnit, String department, boolean isUser, String username) {
+    public EmployeeResource(String uid, Salutation salutation, String firstName, String middleName, String lastName, EmailResource email, List<PhoneResource> phones, LocalDate dateOfBirth, Gender gender, boolean isVerified, String employeeId, String orgUnit, String department, boolean isUser, String username) {
         super(uid);
         this.salutation = salutation;
         this.firstName = firstName;
         this.middleName = middleName;
         this.lastName = lastName;
         this.email = email;
-        this.phone = phone;
+        this.phones = phones;
         this.dateOfBirth = dateOfBirth;
         this.gender = gender;
         this.isVerified = isVerified;
@@ -103,12 +104,12 @@ public class EmployeeResource extends BaseEntity {
         this.email = email;
     }
 
-    public PhoneResource getPhone() {
-        return phone;
+    public List<PhoneResource> getPhones() {
+        return phones;
     }
 
-    public void setPhone(PhoneResource phone) {
-        this.phone = phone;
+    public void setPhones(List<PhoneResource> phones) {
+        this.phones = phones;
     }
 
     public LocalDate getDateOfBirth() {
