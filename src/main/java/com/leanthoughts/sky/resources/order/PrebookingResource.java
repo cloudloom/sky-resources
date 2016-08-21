@@ -9,6 +9,7 @@ public class PrebookingResource extends BaseResource {
     private Set<PrebookingCountResource> prebookings;
     private int totalCount;
     private int totalPax;
+    private int spiceMax;
 
     public PrebookingResource() {
     }
@@ -43,6 +44,14 @@ public class PrebookingResource extends BaseResource {
 
     public void setTotalPax(int totalPax) {
         this.totalPax = totalPax;
+    }
+
+    public int getSpiceMax() {
+        return spiceMax;
+    }
+
+    public void setSpiceMax(int spiceMax) {
+        this.spiceMax = spiceMax;
     }
 
     public boolean equals(Object o) {

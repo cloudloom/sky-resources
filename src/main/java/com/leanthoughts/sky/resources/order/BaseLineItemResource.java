@@ -2,6 +2,7 @@ package com.leanthoughts.sky.resources.order;
 
 import com.leanthoughts.sky.resources.BaseResource;
 import com.leanthoughts.sky.resources.planning.MealCategoryResource;
+import com.leanthoughts.sky.resources.planning.PlanningCriteriaGroupResource;
 import com.leanthoughts.sky.resources.product.ProductResource;
 import org.javamoney.moneta.Money;
 
@@ -14,6 +15,7 @@ public class BaseLineItemResource extends BaseResource {
     private String productReference;
     private String categoryReference;
     private MealCategoryResource category;
+    private PlanningCriteriaGroupResource pGroup;
     private String groupReference;
     private Money unitPrice;
     private Double price;
@@ -119,6 +121,14 @@ public class BaseLineItemResource extends BaseResource {
 
     public void setCategory(MealCategoryResource category) {
         this.category = category;
+    }
+
+    public PlanningCriteriaGroupResource getpGroup() {
+        return pGroup;
+    }
+
+    public void setpGroup(PlanningCriteriaGroupResource pGroup) {
+        this.pGroup = pGroup;
     }
 
     public String toString() {
