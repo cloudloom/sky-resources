@@ -4,6 +4,7 @@ import com.leanthoughts.sky.resources.dictionary.CountType;
 import com.leanthoughts.sky.resources.planning.MealCategoryResource;
 import com.leanthoughts.sky.resources.planning.PlanningCriteriaGroupResource;
 
+import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -17,7 +18,6 @@ public class ArticleResource extends ProductResource {
     private String longDescription;
     private Set<PriceResource> prices = new HashSet<PriceResource>(0);
     private String image;
-    private String id;
     private Set<CategoryResource> categories = new HashSet<CategoryResource>(0);
     private Set<MealCategoryResource> mealCategories = new HashSet<MealCategoryResource>(0);
     private Set<PlanningCriteriaGroupResource> planningCriteriaGroups = new HashSet<PlanningCriteriaGroupResource>();
@@ -26,6 +26,7 @@ public class ArticleResource extends ProductResource {
     private String materialCategory;
     private String type;
     private Set<ProductBundleItemResource> items = new HashSet<>(0);
+    private LocalDateTime created;
 
     /** Customized Properties For App**/
     private double bobQuantity;
@@ -56,10 +57,6 @@ public class ArticleResource extends ProductResource {
         return this.image;
     }
 
-    public String getId() {
-        return this.id;
-    }
-
     public Set<CategoryResource> getCategories() {
         return this.categories;
     }
@@ -86,10 +83,6 @@ public class ArticleResource extends ProductResource {
 
     public void setImage(String image) {
         this.image = image;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public void setCategories(Set<CategoryResource> categories) {
@@ -188,38 +181,74 @@ public class ArticleResource extends ProductResource {
         this.type = type;
     }
 
-    public boolean equals(Object o) {
-        if (o == this) return true;
-        if (!(o instanceof ArticleResource)) return false;
-        final ArticleResource other = (ArticleResource) o;
-        if (!other.canEqual((Object) this)) return false;
-        final Object this$code = this.getCode();
-        final Object other$code = other.getCode();
-        if (this$code == null ? other$code != null : !this$code.equals(other$code)) return false;
-        final Object this$longDescription = this.getLongDescription();
-        final Object other$longDescription = other.getLongDescription();
-        if (this$longDescription == null ? other$longDescription != null : !this$longDescription.equals(other$longDescription))
-            return false;
-        final Object this$image = this.getImage();
-        final Object other$image = other.getImage();
-        if (this$image == null ? other$image != null : !this$image.equals(other$image)) return false;
-        final Object this$id = this.getId();
-        final Object other$id = other.getId();
-        if (this$id == null ? other$id != null : !this$id.equals(other$id)) return false;
-        return true;
+    public LocalDateTime getCreated() {
+        return created;
     }
 
+    public void setCreated(LocalDateTime created) {
+        this.created = created;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+
+        ArticleResource that = (ArticleResource) o;
+
+        if (Double.compare(that.bobQuantity, bobQuantity) != 0) return false;
+        if (Double.compare(that.preBookingQuantity, preBookingQuantity) != 0) return false;
+        if (Double.compare(that.totalQuantity, totalQuantity) != 0) return false;
+        if (sku != null ? !sku.equals(that.sku) : that.sku != null) return false;
+        if (ean != null ? !ean.equals(that.ean) : that.ean != null) return false;
+        if (code != null ? !code.equals(that.code) : that.code != null) return false;
+        if (longDescription != null ? !longDescription.equals(that.longDescription) : that.longDescription != null)
+            return false;
+        if (prices != null ? !prices.equals(that.prices) : that.prices != null) return false;
+        if (image != null ? !image.equals(that.image) : that.image != null) return false;
+        if (categories != null ? !categories.equals(that.categories) : that.categories != null) return false;
+        if (mealCategories != null ? !mealCategories.equals(that.mealCategories) : that.mealCategories != null)
+            return false;
+        if (planningCriteriaGroups != null ? !planningCriteriaGroups.equals(that.planningCriteriaGroups) : that.planningCriteriaGroups != null)
+            return false;
+        if (unitOfMeasure != null ? !unitOfMeasure.equals(that.unitOfMeasure) : that.unitOfMeasure != null)
+            return false;
+        if (materialGroup != null ? !materialGroup.equals(that.materialGroup) : that.materialGroup != null)
+            return false;
+        if (materialCategory != null ? !materialCategory.equals(that.materialCategory) : that.materialCategory != null)
+            return false;
+        if (type != null ? !type.equals(that.type) : that.type != null) return false;
+        if (items != null ? !items.equals(that.items) : that.items != null) return false;
+        return bobQuantityType == that.bobQuantityType;
+
+    }
+
+    @Override
     public int hashCode() {
-        final int PRIME = 59;
-        int result = 1;
-        final Object $code = this.getCode();
-        result = result * PRIME + ($code == null ? 0 : $code.hashCode());
-        final Object $longDescription = this.getLongDescription();
-        result = result * PRIME + ($longDescription == null ? 0 : $longDescription.hashCode());
-        final Object $image = this.getImage();
-        result = result * PRIME + ($image == null ? 0 : $image.hashCode());
-        final Object $id = this.getId();
-        result = result * PRIME + ($id == null ? 0 : $id.hashCode());
+        int result = super.hashCode();
+        long temp;
+        result = 31 * result + (sku != null ? sku.hashCode() : 0);
+        result = 31 * result + (ean != null ? ean.hashCode() : 0);
+        result = 31 * result + (code != null ? code.hashCode() : 0);
+        result = 31 * result + (longDescription != null ? longDescription.hashCode() : 0);
+        result = 31 * result + (prices != null ? prices.hashCode() : 0);
+        result = 31 * result + (image != null ? image.hashCode() : 0);
+        result = 31 * result + (categories != null ? categories.hashCode() : 0);
+        result = 31 * result + (mealCategories != null ? mealCategories.hashCode() : 0);
+        result = 31 * result + (planningCriteriaGroups != null ? planningCriteriaGroups.hashCode() : 0);
+        result = 31 * result + (unitOfMeasure != null ? unitOfMeasure.hashCode() : 0);
+        result = 31 * result + (materialGroup != null ? materialGroup.hashCode() : 0);
+        result = 31 * result + (materialCategory != null ? materialCategory.hashCode() : 0);
+        result = 31 * result + (type != null ? type.hashCode() : 0);
+        result = 31 * result + (items != null ? items.hashCode() : 0);
+        temp = Double.doubleToLongBits(bobQuantity);
+        result = 31 * result + (int) (temp ^ (temp >>> 32));
+        result = 31 * result + (bobQuantityType != null ? bobQuantityType.hashCode() : 0);
+        temp = Double.doubleToLongBits(preBookingQuantity);
+        result = 31 * result + (int) (temp ^ (temp >>> 32));
+        temp = Double.doubleToLongBits(totalQuantity);
+        result = 31 * result + (int) (temp ^ (temp >>> 32));
         return result;
     }
 
