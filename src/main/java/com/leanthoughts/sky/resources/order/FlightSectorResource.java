@@ -12,7 +12,7 @@ public class FlightSectorResource extends BaseResource {
     private String arrivalStation;
     private LocalTime departureTime;
     private LocalTime arrivalTime;
-    private String tailNo;
+    private String tailNumber;
 
     public FlightSectorResource() {
     }
@@ -41,8 +41,8 @@ public class FlightSectorResource extends BaseResource {
         return this.arrivalTime;
     }
 
-    public String getTailNo() {
-        return this.tailNo;
+    public String getTailNumber() {
+        return this.tailNumber;
     }
 
     public void setFlightNumber(String flightNumber) {
@@ -69,8 +69,8 @@ public class FlightSectorResource extends BaseResource {
         this.arrivalTime = arrivalTime;
     }
 
-    public void setTailNo(String tailNo) {
-        this.tailNo = tailNo;
+    public void setTailNumber(String tailNumber) {
+        this.tailNumber = tailNumber;
     }
 
     public boolean equals(Object o) {
@@ -102,8 +102,8 @@ public class FlightSectorResource extends BaseResource {
         final Object other$arrivalTime = other.arrivalTime;
         if (this$arrivalTime == null ? other$arrivalTime != null : !this$arrivalTime.equals(other$arrivalTime))
             return false;
-        final Object this$tailNo = this.tailNo;
-        final Object other$tailNo = other.tailNo;
+        final Object this$tailNo = this.tailNumber;
+        final Object other$tailNo = other.tailNumber;
         if (this$tailNo == null ? other$tailNo != null : !this$tailNo.equals(other$tailNo)) return false;
         return true;
     }
@@ -123,7 +123,7 @@ public class FlightSectorResource extends BaseResource {
         result = result * PRIME + ($departureTime == null ? 0 : $departureTime.hashCode());
         final Object $arrivalTime = this.arrivalTime;
         result = result * PRIME + ($arrivalTime == null ? 0 : $arrivalTime.hashCode());
-        final Object $tailNo = this.tailNo;
+        final Object $tailNo = this.tailNumber;
         result = result * PRIME + ($tailNo == null ? 0 : $tailNo.hashCode());
         return result;
     }
