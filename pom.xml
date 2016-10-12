@@ -6,7 +6,7 @@
 
     <groupId>com.tracebucket.x1.sky.resources</groupId>
     <artifactId>sky-resources</artifactId>
-    <version>3.6.7</version>
+    <version>3.6.8</version>
 
     <properties>
         <java.version>1.8</java.version>
@@ -23,7 +23,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.16.6</version>
+            <version>1.16.10</version>
             <scope>provided</scope>
         </dependency>
         <dependency>

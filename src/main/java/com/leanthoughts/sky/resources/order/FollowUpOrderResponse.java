@@ -10,6 +10,7 @@ public class FollowUpOrderResponse {
     private String planningGroup;
     private String uid;
     private String orderId;
+    private FlightSectorResource flight;
 
     public String getOrderType() {
         return orderType;
@@ -43,17 +44,27 @@ public class FollowUpOrderResponse {
         this.orderId = orderId;
     }
 
-    public FollowUpOrderResponse(String orderType, String planningGroup, String uid) {
+    public FlightSectorResource getFlight() {
+        return flight;
+    }
+
+    public void setFlight(FlightSectorResource flight) {
+        this.flight = flight;
+    }
+
+    public FollowUpOrderResponse(String orderType, String planningGroup, String uid, FlightSectorResource flight) {
         this.orderType = orderType;
         this.planningGroup = planningGroup;
         this.uid = uid;
+        this.flight=flight;
     }
 
-    public FollowUpOrderResponse(String orderType, String planningGroup, String uid,String orderId) {
+    public FollowUpOrderResponse(String orderType, String planningGroup, String uid,String orderId,FlightSectorResource flight) {
         this.orderType = orderType;
         this.planningGroup = planningGroup;
         this.uid = uid;
         this.orderId=orderId;
+        this.flight=flight;
     }
 
     public FollowUpOrderResponse(){}

@@ -28,6 +28,8 @@ public class PurchaseOrderResource extends BaseOrderResource {
     private EmployeeResource storeEmployee;
     private EmployeeResource cateringExecutive;
     private EmployeeResource orderingPartyEmployee;
+    private FlightSectorResource flightSector;
+
 
     /** Customized Properties For App**/
     private String orderingParty;
@@ -184,5 +186,13 @@ public class PurchaseOrderResource extends BaseOrderResource {
 
     public void setOrderingPartyEmployee(EmployeeResource orderingPartyEmployee) {
         this.orderingPartyEmployee = orderingPartyEmployee;
+    }
+
+    public FlightSectorResource getFlightSector() {
+        return flightSector;
+    }
+
+    public void setFlightSector(FlightSectorResource flightSector) {
+        this.flightSector = flightSector;
     }
 }

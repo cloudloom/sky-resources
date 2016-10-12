@@ -17,6 +17,16 @@ public class FlightSectorResource extends BaseResource {
     public FlightSectorResource() {
     }
 
+    public FlightSectorResource(String flightNumber, LocalDate flightDate, String departureStation, String arrivalStation, LocalTime departureTime, LocalTime arrivalTime, String tailNumber) {
+        this.flightNumber = flightNumber;
+        this.flightDate = flightDate;
+        this.departureStation = departureStation;
+        this.arrivalStation = arrivalStation;
+        this.departureTime = departureTime;
+        this.arrivalTime = arrivalTime;
+        this.tailNumber = tailNumber;
+    }
+
     public String getFlightNumber() {
         return this.flightNumber;
     }
