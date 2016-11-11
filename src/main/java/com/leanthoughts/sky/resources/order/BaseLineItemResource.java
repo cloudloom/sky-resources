@@ -22,6 +22,9 @@ public class BaseLineItemResource extends BaseResource {
     private int quantity;
     private String comment;
     private String orderReference;
+    private int bobQty;
+    private int prebookQty;
+
     private Map<String, ProductResource> productMetaData = new HashMap<String, ProductResource>();
 
     public BaseLineItemResource() {
@@ -129,6 +132,22 @@ public class BaseLineItemResource extends BaseResource {
 
     public void setpGroup(PlanningCriteriaGroupResource pGroup) {
         this.pGroup = pGroup;
+    }
+
+    public int getBobQty() {
+        return bobQty;
+    }
+
+    public void setBobQty(int bobQty) {
+        this.bobQty = bobQty;
+    }
+
+    public int getPrebookQty() {
+        return prebookQty;
+    }
+
+    public void setPrebookQty(int prebookQty) {
+        this.prebookQty = prebookQty;
     }
 
     public String toString() {
