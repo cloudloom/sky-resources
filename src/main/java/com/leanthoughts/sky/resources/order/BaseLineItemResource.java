@@ -3,6 +3,7 @@ package com.leanthoughts.sky.resources.order;
 import com.leanthoughts.sky.resources.BaseResource;
 import com.leanthoughts.sky.resources.planning.MealCategoryResource;
 import com.leanthoughts.sky.resources.planning.PlanningCriteriaGroupResource;
+import com.leanthoughts.sky.resources.product.ArticleResource;
 import com.leanthoughts.sky.resources.product.ProductResource;
 import org.javamoney.moneta.Money;
 
@@ -25,7 +26,7 @@ public class BaseLineItemResource extends BaseResource {
     private int bobQty;
     private int prebookQty;
 
-    private Map<String, ProductResource> productMetaData = new HashMap<String, ProductResource>();
+    private ArticleResource productMetaData ;
 
     public BaseLineItemResource() {
     }
@@ -70,7 +71,7 @@ public class BaseLineItemResource extends BaseResource {
         return this.orderReference;
     }
 
-    public Map<String, ProductResource> getProductMetaData() {
+    public ArticleResource getProductMetaData() {
         return this.productMetaData;
     }
 
@@ -106,7 +107,7 @@ public class BaseLineItemResource extends BaseResource {
         this.orderReference = orderReference;
     }
 
-    public void setProductMetaData(Map<String, ProductResource> productMetaData) {
+    public void setProductMetaData(ArticleResource productMetaData) {
         this.productMetaData = productMetaData;
     }
 
