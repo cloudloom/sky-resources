@@ -13,6 +13,7 @@ public class FlightSectorResource extends BaseResource {
     private LocalTime departureTime;
     private LocalTime arrivalTime;
     private String tailNumber;
+    private String aircraftType;
 
     public FlightSectorResource() {
     }
@@ -81,6 +82,14 @@ public class FlightSectorResource extends BaseResource {
 
     public void setTailNumber(String tailNumber) {
         this.tailNumber = tailNumber;
+    }
+
+    public String getAircraftType() {
+        return aircraftType;
+    }
+
+    public void setAircraftType(String aircraftType) {
+        this.aircraftType = aircraftType;
     }
 
     public boolean equals(Object o) {
