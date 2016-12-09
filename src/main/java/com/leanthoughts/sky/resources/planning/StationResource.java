@@ -3,6 +3,8 @@ package com.leanthoughts.sky.resources.planning;
 import com.leanthoughts.sky.resources.BaseResource;
 import com.leanthoughts.sky.resources.flight.AirportResource;
 
+import javax.persistence.Column;
+
 /**
  * Created by fahad on 25-01-2016.
  */
@@ -17,6 +19,8 @@ public class StationResource extends BaseResource {
     private String orgUnitID;
     private String employeeUsername;
     private String tin;
+    private boolean cashDrop;
+    private boolean upliftUnload;
 
     public StationResource() {
     }
@@ -79,6 +83,22 @@ public class StationResource extends BaseResource {
 
     public String getTin() {
         return tin;
+    }
+
+    public boolean isCashDrop() {
+        return cashDrop;
+    }
+
+    public void setCashDrop(boolean cashDrop) {
+        this.cashDrop = cashDrop;
+    }
+
+    public boolean isUpliftUnload() {
+        return upliftUnload;
+    }
+
+    public void setUpliftUnload(boolean upliftUnload) {
+        this.upliftUnload = upliftUnload;
     }
 
     public void setTin(String tin) {
