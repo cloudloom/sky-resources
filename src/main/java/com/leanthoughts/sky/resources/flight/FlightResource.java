@@ -18,10 +18,8 @@ public class FlightResource extends BaseResource {
     private String flightUid;
     private String connId;
     private Date flightDate;
-    @JsonFormat(pattern = "HH:mm:ss")
-    private Date eta;
-    @JsonFormat(pattern = "HH:mm:ss")
-    private Date etd;
+    private String eta;
+    private String etd;
     private String fromAirportCode;
     private String fromAirportName;
     private String toAirportCode;
@@ -117,19 +115,19 @@ public class FlightResource extends BaseResource {
         this.flightDate = flightDate;
     }
 
-    public Date getEta() {
+    public String getEta() {
         return eta;
     }
 
-    public void setEta(Date eta) {
+    public void setEta(String eta) {
         this.eta = eta;
     }
 
-    public Date getEtd() {
+    public String getEtd() {
         return etd;
     }
 
-    public void setEtd(Date etd) {
+    public void setEtd(String etd) {
         this.etd = etd;
     }
 
