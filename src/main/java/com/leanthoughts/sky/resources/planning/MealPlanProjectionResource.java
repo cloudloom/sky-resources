@@ -1,6 +1,7 @@
 package com.leanthoughts.sky.resources.planning;
 
 import com.leanthoughts.sky.resources.BaseResource;
+import com.leanthoughts.sky.resources.flight.ScheduleResource;
 
 import javax.persistence.ElementCollection;
 import java.util.HashSet;
@@ -16,6 +17,7 @@ public class MealPlanProjectionResource extends BaseResource {
     private boolean applyGlp;
     private Set<MealPlanProjectionItemResource> items = new HashSet<MealPlanProjectionItemResource>();
     private Set<String> associatedSchedules = new HashSet<>(0);
+    private Set<ScheduleResource> associatedSchedulesMeta = new HashSet<>(0);
 
     public MealPlanProjectionResource() {
     }
@@ -66,6 +68,14 @@ public class MealPlanProjectionResource extends BaseResource {
 
     public void setAssociatedSchedules(Set<String> associatedSchedules) {
         this.associatedSchedules = associatedSchedules;
+    }
+
+    public Set<ScheduleResource> getAssociatedSchedulesMeta() {
+        return associatedSchedulesMeta;
+    }
+
+    public void setAssociatedSchedulesMeta(Set<ScheduleResource> associatedSchedulesMeta) {
+        this.associatedSchedulesMeta = associatedSchedulesMeta;
     }
 
     public boolean equals(Object o) {

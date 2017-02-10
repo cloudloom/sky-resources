@@ -182,4 +182,25 @@ public class EmployeeResource extends BaseEntity {
     public void setStatus(String status) {
         this.status = status;
     }
+
+    @Override
+    public String toString() {
+        return "EmployeeResource{" +
+                "salutation='" + salutation + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", middleName='" + middleName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email=" + email +
+                ", phones=" + phones +
+                ", dateOfBirth=" + dateOfBirth +
+                ", gender='" + gender + '\'' +
+                ", isVerified=" + isVerified +
+                ", employeeId='" + employeeId + '\'' +
+                ", orgUnit='" + orgUnit + '\'' +
+                ", department='" + department + '\'' +
+                ", isUser=" + isUser +
+                ", username='" + username + '\'' +
+                ", status='" + status + '\'' +
+                "} " + super.toString();
+    }
 }
