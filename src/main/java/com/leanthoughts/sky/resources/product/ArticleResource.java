@@ -1,5 +1,6 @@
 package com.leanthoughts.sky.resources.product;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.leanthoughts.sky.resources.dictionary.CountType;
 import com.leanthoughts.sky.resources.planning.MealCategoryResource;
 import com.leanthoughts.sky.resources.planning.PlanningCriteriaGroupResource;
@@ -11,6 +12,7 @@ import java.util.Set;
 /**
  * Created by sadath on 01-Jan-2016.
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class ArticleResource extends ProductResource {
     private String sku;
     private String ean;

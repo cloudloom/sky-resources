@@ -1,9 +1,12 @@
 package com.leanthoughts.sky.resources.product;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 /**
  * @author fahad
  * @since 29-07-2016.
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class ProductBundleItemResource {
 
     private Boolean mainProduct;
