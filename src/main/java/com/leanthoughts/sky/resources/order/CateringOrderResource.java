@@ -23,6 +23,8 @@ public class CateringOrderResource extends BaseOrderResource {
     private EmployeeResource createdByMeta;
     private StationResource upliftStationMeta;
     private StationResource unloadStationMeta;
+    private boolean glpApplied;
+
 
     public CateringOrderResource() {
     }
@@ -159,6 +161,14 @@ public class CateringOrderResource extends BaseOrderResource {
 
     public void setUnloadStationMeta(StationResource unloadStationMeta) {
         this.unloadStationMeta = unloadStationMeta;
+    }
+
+    public boolean isGlpApplied() {
+        return glpApplied;
+    }
+
+    public void setGlpApplied(boolean glpApplied) {
+        this.glpApplied = glpApplied;
     }
 
     @Override
