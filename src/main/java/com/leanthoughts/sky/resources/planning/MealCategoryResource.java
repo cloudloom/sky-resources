@@ -91,6 +91,14 @@ public class MealCategoryResource extends BaseResource {
     }
 
     public Map<String, Boolean> getProducts() {
+
+        children.forEach(child -> {
+            if (child != null && child.products != null)
+                products.putAll(child.products);
+        });
+
+
+
         return products;
     }
 
